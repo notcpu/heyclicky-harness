@@ -1,4 +1,4 @@
-# HeyClicky × opencode
+# HeyClicky × anything
 
 Use **HeyClicky as the harness** — its cursor, drawings, notch, agents and drive UI — while
 **inference runs on a provider you choose** instead of HeyClicky's hosted models.
