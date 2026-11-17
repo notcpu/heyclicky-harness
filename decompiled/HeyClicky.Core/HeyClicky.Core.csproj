@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{D28D80BA-39C1-4855-A610-7AA12670E34B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeyClicky.Core</RootNamespace>
+    <AssemblyName>HeyClicky.Core</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommunityToolkit.Mvvm">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.SDK.NET">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.Windows.SDK.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.AccessControl">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRT.Runtime">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\WinRT.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="--y__InlineArray2.cs" />
+    <Compile Include="--y__InlineArray3.cs" />
+    <Compile Include="--y__InlineArray4.cs" />
+    <Compile Include="--y__InlineArray7.cs" />
+    <Compile Include="--z__ReadOnlyArray.cs" />
+    <Compile Include="--z__ReadOnlyList.cs" />
+    <Compile Include="--z__ReadOnlySingleElementList.cs" />
+    <Compile Include="Auth\AtomicFile.cs" />
+    <Compile Include="Auth\AuthCallback.cs" />
+    <Compile Include="Auth\AuthCallbackError.cs" />
+    <Compile Include="Auth\AuthDeepLink.cs" />
+    <Compile Include="Auth\AuthTokenStore.cs" />
+    <Compile Include="Auth\JwtPayload.cs" />
+    <Compile Include="Auth\SignInCallbackGuard.cs" />
+    <Compile Include="Auth\StoredAuthSession.cs" />
+    <Compile Include="Auth\StoredPendingSignIn.cs" />
+    <Compile Include="Auth\SupabaseAuthService.cs" />
+    <Compile Include="Billing\AgentModelPricing.cs" />
+    <Compile Include="Billing\AgentTurnCostLedger.cs" />
+    <Compile Include="Billing\AgentTurnUsageRecord.cs" />
+    <Compile Include="Billing\BillingActionStyle.cs" />
+    <Compile Include="Billing\BillingFetchError.cs" />
+    <Compile Include="Billing\BillingFetchErrorKind.cs" />
+    <Compile Include="Billing\BillingPaywallDetector.cs" />
+    <Compile Include="Billing\BillingPlanAction.cs" />
+    <Compile Include="Billing\BillingPlanActionKind.cs" />
+    <Compile Include="Billing\BillingPlanCard.cs" />
+    <Compile Include="Billing\BillingStateService.cs" />
+    <Compile Include="Billing\BillingUsageMeter.cs" />
+    <Compile Include="Billing\BillingUsageRing.cs" />
+    <Compile Include="Billing\BillingUsageSection.cs" />
+    <Compile Include="Billing\PaywallPayload.cs" />
+    <Compile Include="Billing\PaywallPayloads.cs" />
+    <Compile Include="Billing\PaywallPlanOption.cs" />
+    <Compile Include="Billing\PaywallReachedException.cs" />
+    <Compile Include="Billing\PaywallSource.cs" />
+    <Compile Include="Billing\PaywallSourceExtensions.cs" />
+    <Compile Include="Billing\PlanBillingFingerprint.cs" />
+    <Compile Include="Billing\ReferralEarningsEstimate.cs" />
+    <Compile Include="Billing\ReferralEarningsEstimator.cs" />
+    <Compile Include="Billing\ReferralEarningsMixEstimate.cs" />
+    <Compile Include="Billing\ReferralEarningsPlanMix.cs" />
+    <Compile Include="Billing\ReferralFormatting.cs" />
+    <Compile Include="Billing\ReferralPaywallDiscount.cs" />
+    <Compile Include="Brain\BrainClient.cs" />
+    <Compile Include="Brain\BrainCompactionPolicy.cs" />
+    <Compile Include="Brain\BrainCompactReply.cs" />
+    <Compile Include="Brain\BrainCompactResult.cs" />
+    <Compile Include="Brain\BrainComputerCall.cs" />
+    <Compile Include="Brain\BrainPrewarmPolicy.cs" />
+    <Compile Include="Brain\BrainReply.cs" />
+    <Compile Include="Brain\BrainReplyAccumulator.cs" />
+    <Compile Include="Brain\BrainRequestCompression.cs" />
+    <Compile Include="Brain\BrainRequestFlags.cs" />
+    <Compile Include="Brain\BrainSession.cs" />
+    <Compile Include="Brain\BrainSseParser.cs" />
+    <Compile Include="Brain\BrainToolCall.cs" />
+    <Compile Include="Brain\BrainToolCallPolicy.cs" />
+    <Compile Include="Brain\BrainToolRunner.cs" />
+    <Compile Include="Brain\BrainTurnContext.cs" />
+    <Compile Include="Brain\BrainTurnException.cs" />
+    <Compile Include="Brain\BrainTurnTiming.cs" />
+    <Compile Include="Brain\DrawingContinuationDecision.cs" />
+    <Compile Include="Brain\DrawingContinuationDecisions.cs" />
+    <Compile Include="Brain\DrawingDisplayChoices.cs" />
+    <Compile Include="Brain\IBrainStreamSink.cs" />
+    <Compile Include="Brain\JsonNodeContext.cs" />
+    <Compile Include="Brain\JsonWriterContent.cs" />
+    <Compile Include="Brain\OneBrainStats.cs" />
+    <Compile Include="Brain\ProgramText.cs" />
+    <Compile Include="Brain\SayLines.cs" />
+    <Compile Include="Brain\ScreenshotFilesUnavailableException.cs" />
+    <Compile Include="Brain\ToolOutput.cs" />
+    <Compile Include="Browser\BrowserErrorKinds.cs" />
+    <Compile Include="Browser\BrowserTurnContext.cs" />
+    <Compile Include="Browser\BrowserTurnUsage.cs" />
+    <Compile Include="Browser\BrowserTurnUsageTally.cs" />
+    <Compile Include="Browser\BrowserUploads.cs" />
+    <Compile Include="Browser\ChromiumBrowser.cs" />
+    <Compile Include="Browser\ChromiumBrowserRegistrationException.cs" />
+    <Compile Include="Browser\ChromiumBrowsers.cs" />
+    <Compile Include="Browser\ClickyBrowserBridge.cs" />
+    <Compile Include="Browser\LoopbackHttpServer.cs" />
+    <Compile Include="Browser\LoopbackMcpServer.cs" />
+    <Compile Include="Browser\UploadApprovalAnswer.cs" />
+    <Compile Include="CommunityToolkit\Mvvm\ComponentModel\__Internals\__KnownINotifyPropertyChangedArgs.cs" />
+    <Compile Include="CommunityToolkit\Mvvm\ComponentModel\__Internals\__KnownINotifyPropertyChangingArgs.cs" />
+    <Compile Include="Configuration\AppBundleConfiguration.cs" />
+    <Compile Include="Configuration\TelemetryConfiguration.cs" />
+    <Compile Include="Connectors\CodexStoredSignIn.cs" />
+    <Compile Include="Connectors\CodexStoredSignIns.cs" />
+    <Compile Include="Connectors\LoopbackCallbackServer.cs" />
+    <Compile Include="Connectors\McpOAuth.cs" />
+    <Compile Include="Connectors\McpOAuthClientRegistration.cs" />
+    <Compile Include="Connectors\McpOAuthDiscovery.cs" />
+    <Compile Include="Connectors\McpOAuthException.cs" />
+    <Compile Include="Connectors\McpOAuthFailure.cs" />
+    <Compile Include="Connectors\McpOAuthSignInResult.cs" />
+    <Compile Include="Connectors\McpOAuthSignInSupport.cs" />
+    <Compile Include="Connectors\McpOAuthTokens.cs" />
+    <Compile Include="Connectors\McpProbe.cs" />
+    <Compile Include="Connectors\McpToolCatalog.cs" />
+    <Compile Include="Connectors\McpVerification.cs" />
+    <Compile Include="CoreJsonContext.cs" />
+    <Compile Include="CoreServices.cs" />
+    <Compile Include="Dictation\DictationCleanupContext.cs" />
+    <Compile Include="Dictation\DictationController.cs" />
+    <Compile Include="Dictation\DictationControllerOptions.cs" />
+    <Compile Include="Dictation\DictationCorrectionDetector.cs" />
+    <Compile Include="Dictation\DictationDeliveryOutcome.cs" />
+    <Compile Include="Dictation\DictationEngagement.cs" />
+    <Compile Include="Dictation\DictationHotkeyStateMachine.cs" />
+    <Compile Include="Dictation\DictationLanguage.cs" />
+    <Compile Include="Dictation\DictationLanguageCatalog.cs" />
+    <Compile Include="Dictation\DictationLearnedCorrection.cs" />
+    <Compile Include="Dictation\DictationPaywallReachedException.cs" />
+    <Compile Include="Dictation\DictationResult.cs" />
+    <Compile Include="Dictation\DictationTranscriptArchive.cs" />
+    <Compile Include="Dictation\DictationTranscriptionClient.cs" />
+    <Compile Include="Dictation\DictationVocabulary.cs" />
+    <Compile Include="Dictation\IDictationScheduler.cs" />
+    <Compile Include="Documents\DocumentText.cs" />
+    <Compile Include="Documents\Markdown\MarkdownInlineParser.cs" />
+    <Compile Include="Documents\Markdown\MarkdownInlineRun.cs" />
+    <Compile Include="Documents\Markdown\MarkdownViewerBlock.cs" />
+    <Compile Include="Documents\Markdown\MarkdownViewerListItem.cs" />
+    <Compile Include="Documents\Markdown\MarkdownViewerParser.cs" />
+    <Compile Include="Documents\Markdown\MarkdownViewerTableLayout.cs" />
+    <Compile Include="Documents\Markdown\MarkdownViewerTableScrollGesture.cs" />
+    <Compile Include="Documents\PdfText.cs" />
+    <Compile Include="Documents\Spreadsheet\ISpreadsheetTextMeasurer.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetBorderEdge.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetCell.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetCellAddress.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetCellKind.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetCellRange.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetCellStyle.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetColor.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetColors.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetDelimitedTextReader.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetGridLayout.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetHorizontalAlignment.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetMetrics.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetNumberFormat.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetReadErrorKind.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetReadException.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetRect.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetSampleFiles.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetSharedStringsParser.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetSheet.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetSheetParser.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetStylesReader.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetThemeColors.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetVerticalAlignment.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetWorkbook.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetXlsxReader.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetXmlNode.cs" />
+    <Compile Include="Documents\Spreadsheet\SpreadsheetZipArchive.cs" />
+    <Compile Include="Documents\Spreadsheet\SwiftText.cs" />
+    <Compile Include="Drive\AgentDriveEnding.cs" />
+    <Compile Include="Drive\AgentDriveOutcome.cs" />
+    <Compile Include="Drive\AgentDriveReports.cs" />
+    <Compile Include="Drive\ClickyConsentReplyMarker.cs" />
+    <Compile Include="Drive\ClickyDriveActions.cs" />
+    <Compile Include="Drive\ClickyDriveAnalytics.cs" />
+    <Compile Include="Drive\ClickyDriveBilling.cs" />
+    <Compile Include="Drive\ClickyDriveLines.cs" />
+    <Compile Include="Drive\ClickyDriveUserMouse.cs" />
+    <Compile Include="Drive\IClickyDriveTurns.cs" />
+    <Compile Include="Drive\MacStepAnswer.cs" />
+    <Compile Include="Drive\MacStepWaiters.cs" />
+    <Compile Include="Identity\ClickyClientIdentity.cs" />
+    <Compile Include="Identity\ClickySystemEnvironment.cs" />
+    <Compile Include="Ink\ClickyEdgeStackInkReading.cs" />
+    <Compile Include="Ink\ClickyHomeInkNote.cs" />
+    <Compile Include="Ink\ClickyInkActionFeedback.cs" />
+    <Compile Include="Ink\ClickyInkActionsStore.cs" />
+    <Compile Include="Ink\ClickyInkActivity.cs" />
+    <Compile Include="Ink\ClickyInkBrief.cs" />
+    <Compile Include="Ink\ClickyInkChange.cs" />
+    <Compile Include="Ink\ClickyInkChartRules.cs" />
+    <Compile Include="Ink\ClickyInkChoices.cs" />
+    <Compile Include="Ink\ClickyInkClock.cs" />
+    <Compile Include="Ink\ClickyInkConnections.cs" />
+    <Compile Include="Ink\ClickyInkConnectRules.cs" />
+    <Compile Include="Ink\ClickyInkCountdownReading.cs" />
+    <Compile Include="Ink\ClickyInkCriteriaRules.cs" />
+    <Compile Include="Ink\ClickyInkDashboardBoard.cs" />
+    <Compile Include="Ink\ClickyInkDashboardKinds.cs" />
+    <Compile Include="Ink\ClickyInkDashboardResolving.cs" />
+    <Compile Include="Ink\ClickyInkDashboardSplit.cs" />
+    <Compile Include="Ink\ClickyInkDashboardViewMath.cs" />
+    <Compile Include="Ink\ClickyInkDates.cs" />
+    <Compile Include="Ink\ClickyInkDayLabel.cs" />
+    <Compile Include="Ink\ClickyInkDocument.cs" />
+    <Compile Include="Ink\ClickyInkDocumentKinds.cs" />
+    <Compile Include="Ink\ClickyInkEventDates.cs" />
+    <Compile Include="Ink\ClickyInkEventText.cs" />
+    <Compile Include="Ink\ClickyInkFigureRules.cs" />
+    <Compile Include="Ink\ClickyInkFormRules.cs" />
+    <Compile Include="Ink\ClickyInkFrontPageContent.cs" />
+    <Compile Include="Ink\ClickyInkFrontPagePlanner.cs" />
+    <Compile Include="Ink\ClickyInkFrontPageVariant.cs" />
+    <Compile Include="Ink\ClickyInkFrontPageVariants.cs" />
+    <Compile Include="Ink\ClickyInkGalleryRules.cs" />
+    <Compile Include="Ink\ClickyInkGroup.cs" />
+    <Compile Include="Ink\ClickyInkItemsRules.cs" />
+    <Compile Include="Ink\ClickyInkLint.cs" />
+    <Compile Include="Ink\ClickyInkLiveBlockResolving.cs" />
+    <Compile Include="Ink\ClickyInkLiveNote.cs" />
+    <Compile Include="Ink\ClickyInkLiveNoteFolding.cs" />
+    <Compile Include="Ink\ClickyInkMadeLink.cs" />
+    <Compile Include="Ink\ClickyInkMatch.cs" />
+    <Compile Include="Ink\ClickyInkMotion.cs" />
+    <Compile Include="Ink\ClickyInkNoteAction.cs" />
+    <Compile Include="Ink\ClickyInkNoteActions.cs" />
+    <Compile Include="Ink\ClickyInkNotePage.cs" />
+    <Compile Include="Ink\ClickyInkNotePages.cs" />
+    <Compile Include="Ink\ClickyInkNoteStore.cs" />
+    <Compile Include="Ink\ClickyInkNoteVersion.cs" />
+    <Compile Include="Ink\ClickyInkNumber.cs" />
+    <Compile Include="Ink\ClickyInkNumberFormatting.cs" />
+    <Compile Include="Ink\ClickyInkObjectKey.cs" />
+    <Compile Include="Ink\ClickyInkParser.cs" />
+    <Compile Include="Ink\ClickyInkPatchStream.cs" />
+    <Compile Include="Ink\ClickyInkPaths.cs" />
+    <Compile Include="Ink\ClickyInkPen.cs" />
+    <Compile Include="Ink\ClickyInkPenAnchor.cs" />
+    <Compile Include="Ink\ClickyInkPenAttribute.cs" />
+    <Compile Include="Ink\ClickyInkPenSchedule.cs" />
+    <Compile Include="Ink\ClickyInkPipeline.cs" />
+    <Compile Include="Ink\ClickyInkPlanOff.cs" />
+    <Compile Include="Ink\ClickyInkPlanReading.cs" />
+    <Compile Include="Ink\ClickyInkProgress.cs" />
+    <Compile Include="Ink\ClickyInkQuestionAnswerRules.cs" />
+    <Compile Include="Ink\ClickyInkQuietReading.cs" />
+    <Compile Include="Ink\ClickyInkReceiptRules.cs" />
+    <Compile Include="Ink\ClickyInkReviewListRules.cs" />
+    <Compile Include="Ink\ClickyInkReviewRules.cs" />
+    <Compile Include="Ink\ClickyInkRoutineControl.cs" />
+    <Compile Include="Ink\ClickyInkRowMotion.cs" />
+    <Compile Include="Ink\ClickyInkRowMotionGroups.cs" />
+    <Compile Include="Ink\ClickyInkRun.cs" />
+    <Compile Include="Ink\ClickyInkRunLine.cs" />
+    <Compile Include="Ink\ClickyInkSamples.cs" />
+    <Compile Include="Ink\ClickyInkSentAction.cs" />
+    <Compile Include="Ink\ClickyInkSeries.cs" />
+    <Compile Include="Ink\ClickyInkSheetCamera.cs" />
+    <Compile Include="Ink\ClickyInkSheetRowInfo.cs" />
+    <Compile Include="Ink\ClickyInkSheetRowKind.cs" />
+    <Compile Include="Ink\ClickyInkSketchModel.cs" />
+    <Compile Include="Ink\ClickyInkSketchRandom.cs" />
+    <Compile Include="Ink\ClickyInkSparkReading.cs" />
+    <Compile Include="Ink\ClickyInkStatus.cs" />
+    <Compile Include="Ink\ClickyInkStatusState.cs" />
+    <Compile Include="Ink\ClickyInkStreak.cs" />
+    <Compile Include="Ink\ClickyInkStreakDay.cs" />
+    <Compile Include="Ink\ClickyInkStreakReading.cs" />
+    <Compile Include="Ink\ClickyInkStyle.cs" />
+    <Compile Include="Ink\ClickyInkTableFont.cs" />
+    <Compile Include="Ink\ClickyInkTableLayout.cs" />
+    <Compile Include="Ink\ClickyInkTableRules.cs" />
+    <Compile Include="Ink\ClickyInkTallyReading.cs" />
+    <Compile Include="Ink\ClickyInkTextContent.cs" />
+    <Compile Include="Ink\ClickyInkTicketRules.cs" />
+    <Compile Include="Ink\ClickyInkWords.cs" />
+    <Compile Include="Ink\ClickyInkWordsExtensions.cs" />
+    <Compile Include="Ink\ClickyLiveNotePreferences.cs" />
+    <Compile Include="Ink\ClickyLiveNoteStore.cs" />
+    <Compile Include="Ink\IClickyInkFrontPageMeasurer.cs" />
+    <Compile Include="Ink\InkActionsSnapshot.cs" />
+    <Compile Include="Ink\InkDispatch.cs" />
+    <Compile Include="Ink\InkFiles.cs" />
+    <Compile Include="Ink\InkJsonContext.cs" />
+    <Compile Include="Ink\InkNoteSnapshot.cs" />
+    <Compile Include="Ink\InkNoteVersionFile.cs" />
+    <Compile Include="Ink\InkRange.cs" />
+    <Compile Include="Ink\InkSentActionFile.cs" />
+    <Compile Include="Ink\InkText.cs" />
+    <Compile Include="Ink\Scheduler.cs" />
+    <Compile Include="Net\ClickyClientHeadersHandler.cs" />
+    <Compile Include="Net\ClickyHttp.cs" />
+    <Compile Include="Notch\CachedConversation.cs" />
+    <Compile Include="Notch\ChatActionCaption.cs" />
+    <Compile Include="Notch\ChatHandOff.cs" />
+    <Compile Include="Notch\ChatHandOffKind.cs" />
+    <Compile Include="Notch\ChatHandOffOutcome.cs" />
+    <Compile Include="Notch\ChatHandOffs.cs" />
+    <Compile Include="Notch\ChatLiveReply.cs" />
+    <Compile Include="Notch\ChatReplyPreview.cs" />
+    <Compile Include="Notch\ChatRow.cs" />
+    <Compile Include="Notch\ChatTaskEnd.cs" />
+    <Compile Include="Notch\ChatTranscript.cs" />
+    <Compile Include="Notch\ChatWorkCardMode.cs" />
+    <Compile Include="Notch\ChatWorkCardRules.cs" />
+    <Compile Include="Notch\ComposerAttachmentPolicy.cs" />
+    <Compile Include="Notch\ConversationHistory.cs" />
+    <Compile Include="Notch\ConversationMessage.cs" />
+    <Compile Include="Notch\HeyClickyWindowRules.cs" />
+    <Compile Include="Notch\IChatHandOffDirectory.cs" />
+    <Compile Include="Notch\MultiAgentRotationCursor.cs" />
+    <Compile Include="Notch\NotchChatAnalytics.cs" />
+    <Compile Include="Notch\NotchChatFullReplyCloseVia.cs" />
+    <Compile Include="Notch\NotchChatFullReplyOpenSource.cs" />
+    <Compile Include="Notch\NotchChatJsonContext.cs" />
+    <Compile Include="Notch\NotchChatSessionCloseReason.cs" />
+    <Compile Include="Notch\NotchChatSessionOpenVia.cs" />
+    <Compile Include="Notch\NotchPresenter.cs" />
+    <Compile Include="Notch\NotchSettingsSection.cs" />
+    <Compile Include="Notch\NotchTab.cs" />
+    <Compile Include="Notch\NotchTabNames.cs" />
+    <Compile Include="Notch\NotchTabs.cs" />
+    <Compile Include="Notch\NotchUpdate.cs" />
+    <Compile Include="Notch\NotchUpdateKind.cs" />
+    <Compile Include="Notch\NotchUpdateKindNames.cs" />
+    <Compile Include="Notch\NotchUpdates.cs" />
+    <Compile Include="Notch\TrayTooltip.cs" />
+    <Compile Include="Onboarding\CursorColorOption.cs" />
+    <Compile Include="Onboarding\DiscoveryChannelOption.cs" />
+    <Compile Include="Onboarding\DrawnTourBriefs.cs" />
+    <Compile Include="Onboarding\HostedVideoFailure.cs" />
+    <Compile Include="Onboarding\HostedVideoFailureReporter.cs" />
+    <Compile Include="Onboarding\InterviewBubblePagination.cs" />
+    <Compile Include="Onboarding\IntroVideoSourceKind.cs" />
+    <Compile Include="Onboarding\IntroVideoSources.cs" />
+    <Compile Include="Onboarding\MicCheckLevel.cs" />
+    <Compile Include="Onboarding\NotchOnboardingCardKind.cs" />
+    <Compile Include="Onboarding\NotchOnboardingCardViewModel.cs" />
+    <Compile Include="Onboarding\OnboardingCatalog.cs" />
+    <Compile Include="Onboarding\OnboardingProgress.cs" />
+    <Compile Include="Onboarding\OnboardingTutorialPhase.cs" />
+    <Compile Include="Onboarding\OnboardingTutorialStep.cs" />
+    <Compile Include="Onboarding\OnboardingTutorialStepInfo.cs" />
+    <Compile Include="Onboarding\OnboardingTutorialViewModel.cs" />
+    <Compile Include="Onboarding\PreSignInIntroStep.cs" />
+    <Compile Include="Onboarding\PreSignInIntroViewModel.cs" />
+    <Compile Include="Onboarding\SquadPack.cs" />
+    <Compile Include="Platform\IDesktopActions.cs" />
+    <Compile Include="Platform\TextInsertOutcome.cs" />
+    <Compile Include="Platform\WindowsDesktopActions.cs" />
+    <Compile Include="Proactive\AgentBackendClient.cs" />
+    <Compile Include="Proactive\AgentIntegrationInfo.cs" />
+    <Compile Include="Proactive\AgentNotification.cs" />
+    <Compile Include="Proactive\AgentNotificationSeverity.cs" />
+    <Compile Include="Proactive\ClickyFoundingMarker.cs" />
+    <Compile Include="Proactive\FallbackClickyIdentity.cs" />
+    <Compile Include="Proactive\ForegroundActivity.cs" />
+    <Compile Include="Proactive\IntegrationCandidate.cs" />
+    <Compile Include="Proactive\IntegrationSuggestionRules.cs" />
+    <Compile Include="Proactive\MeetingActionKind.cs" />
+    <Compile Include="Proactive\MeetingCountdownRules.cs" />
+    <Compile Include="Proactive\MorningDismissalHistory.cs" />
+    <Compile Include="Proactive\MorningGreetingPolicy.cs" />
+    <Compile Include="Proactive\MorningSuggestionsInvitationPolicy.cs" />
+    <Compile Include="Proactive\MorningSuggestionsNotice.cs" />
+    <Compile Include="Proactive\PendingSuggestionJob.cs" />
+    <Compile Include="Proactive\ProactiveAccountState.cs" />
+    <Compile Include="Proactive\ProactiveAgentsClient.cs" />
+    <Compile Include="Proactive\ProactiveCadence.cs" />
+    <Compile Include="Proactive\ProactiveCadenceRules.cs" />
+    <Compile Include="Proactive\ProactiveCheckReason.cs" />
+    <Compile Include="Proactive\ProactiveCheckReasonWire.cs" />
+    <Compile Include="Proactive\ProactiveClickyDescriptor.cs" />
+    <Compile Include="Proactive\ProactiveHistory.cs" />
+    <Compile Include="Proactive\ProactiveHistoryEntry.cs" />
+    <Compile Include="Proactive\ProactiveJobState.cs" />
+    <Compile Include="Proactive\ProactiveJobStatus.cs" />
+    <Compile Include="Proactive\ProactiveJsonContext.cs" />
+    <Compile Include="Proactive\ProactiveLanePause.cs" />
+    <Compile Include="Proactive\ProactiveNewClicky.cs" />
+    <Compile Include="Proactive\ProactiveQueueStatus.cs" />
+    <Compile Include="Proactive\ProactiveQueueStatusKind.cs" />
+    <Compile Include="Proactive\ProactiveRequestInputs.cs" />
+    <Compile Include="Proactive\ProactiveResolution.cs" />
+    <Compile Include="Proactive\ProactiveRoutine.cs" />
+    <Compile Include="Proactive\ProactiveSlotDayState.cs" />
+    <Compile Include="Proactive\ProactiveStore.cs" />
+    <Compile Include="Proactive\ProactiveStoreData.cs" />
+    <Compile Include="Proactive\ProactiveSuggestionCard.cs" />
+    <Compile Include="Proactive\QueuedProactiveTask.cs" />
+    <Compile Include="Proactive\RemoteTaskReportBlock.cs" />
+    <Compile Include="Proactive\SuggestionApprovalMarker.cs" />
+    <Compile Include="Proactive\SuggestionVoiceAction.cs" />
+    <Compile Include="Proactive\TimeOfDayGreeting.cs" />
+    <Compile Include="Proactive\UpcomingCalendarEvent.cs" />
+    <Compile Include="Proactive\UpcomingCalendarFetch.cs" />
+    <Compile Include="Proactive\UpcomingMeetingsClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\AppSettings.cs" />
+    <Compile Include="Settings\SettingsStore.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.10.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.11.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.12.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.13.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.14.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.15.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.16.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.17.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.18.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.19.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.2.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.20.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.21.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.22.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.23.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.24.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.25.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.26.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.27.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.28.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.29.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.3.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.30.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.31.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.32.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.33.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.34.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.35.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.36.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.37.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.38.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.39.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.4.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.40.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.41.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.42.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.43.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.44.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.45.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.46.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.47.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.48.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.49.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.5.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.6.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.7.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.8.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.9.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F2A86C3D8F8653D6C99BE1B8441A5DADEC6C855822.cs" />
+    <Compile Include="Telemetry\AgentFailureReason.cs" />
+    <Compile Include="Telemetry\AnalyticsEvent.cs" />
+    <Compile Include="Telemetry\ClickyAITracing.cs" />
+    <Compile Include="Telemetry\ClickyAnalytics.cs" />
+    <Compile Include="Telemetry\CrashReporter.cs" />
+    <Compile Include="Telemetry\CrashReportLevel.cs" />
+    <Compile Include="Telemetry\IAnalyticsSink.cs" />
+    <Compile Include="Telemetry\ICrashReporter.cs" />
+    <Compile Include="Telemetry\LogAnalyticsSink.cs" />
+    <Compile Include="Telemetry\NullAnalyticsSink.cs" />
+    <Compile Include="Telemetry\PostHogAnalyticsSink.cs" />
+    <Compile Include="Tools\AgentClickyInfo.cs" />
+    <Compile Include="Tools\AgentHandoffBlock.cs" />
+    <Compile Include="Tools\AgentJobInfo.cs" />
+    <Compile Include="Tools\AgentJobRunInfo.cs" />
+    <Compile Include="Tools\AgentTaskInfo.cs" />
+    <Compile Include="Tools\AgentThreadInfo.cs" />
+    <Compile Include="Tools\AgentToolHooks.cs" />
+    <Compile Include="Tools\AgentToolLaunch.cs" />
+    <Compile Include="Tools\AgentTools.cs" />
+    <Compile Include="Tools\ClickyNotes.cs" />
+    <Compile Include="Tools\CompanionConversationBuffer.cs" />
+    <Compile Include="Tools\CompanionToolContext.cs" />
+    <Compile Include="Tools\CompanionTools.cs" />
+    <Compile Include="Tools\IAgentToolHost.cs" />
+    <Compile Include="Tools\LocalRootTools.cs" />
+    <Compile Include="Tools\OneBrainJobIds.cs" />
+    <Compile Include="Tools\SessionsSendContext.cs" />
+    <Compile Include="Tools\SpawnRepeatGuard.cs" />
+    <Compile Include="Tools\ToolArgs.cs" />
+    <Compile Include="Tools\ToolResults.cs" />
+    <Compile Include="Tools\WorkerPost.cs" />
+    <Compile Include="Tools\WorkerTools.cs" />
+    <Compile Include="Voice\AppTeachingIds.cs" />
+    <Compile Include="Voice\Attachments.cs" />
+    <Compile Include="Voice\BrainUserContext.cs" />
+    <Compile Include="Voice\CompanionSession.cs" />
+    <Compile Include="Voice\CompanionSessionOptions.cs" />
+    <Compile Include="Voice\CompanionTurnFinish.cs" />
+    <Compile Include="Voice\CompanionTurnMetrics.cs" />
+    <Compile Include="Voice\CustomConnectorDescription.cs" />
+    <Compile Include="Voice\DeepgramTranscriber.cs" />
+    <Compile Include="Voice\DrawingCaptionTiming.cs" />
+    <Compile Include="Voice\DrawingRecord.cs" />
+    <Compile Include="Voice\EarsLanguage.cs" />
+    <Compile Include="Voice\EarsLanguageJson.cs" />
+    <Compile Include="Voice\ExpressiveVoice.cs" />
+    <Compile Include="Voice\FullscreenGameNote.cs" />
+    <Compile Include="Voice\GeminiMouthEvent.cs" />
+    <Compile Include="Voice\GeminiMouthEventKind.cs" />
+    <Compile Include="Voice\GeminiMouthTurns.cs" />
+    <Compile Include="Voice\GeminiTranscriber.cs" />
+    <Compile Include="Voice\HighlightCompositor.cs" />
+    <Compile Include="Voice\IntegrationAccount.cs" />
+    <Compile Include="Voice\IntegrationAccounts.cs" />
+    <Compile Include="Voice\IPageReader.cs" />
+    <Compile Include="Voice\LessonNarration.cs" />
+    <Compile Include="Voice\LineAudioChunkHandler.cs" />
+    <Compile Include="Voice\MouthConfig.cs" />
+    <Compile Include="Voice\PageContext.cs" />
+    <Compile Include="Voice\PageReads.cs" />
+    <Compile Include="Voice\PageReference.cs" />
+    <Compile Include="Voice\Pcm16.cs" />
+    <Compile Include="Voice\Pcm16MonoResampler.cs" />
+    <Compile Include="Voice\RealtimeMouth.cs" />
+    <Compile Include="Voice\RealtimeProviderAvailabilityDiagnosis.cs" />
+    <Compile Include="Voice\RealtimeProviderUnavailableReason.cs" />
+    <Compile Include="Voice\RealtimeSocketOpenException.cs" />
+    <Compile Include="Voice\ScreenSettle.cs" />
+    <Compile Include="Voice\TimeStretcher.cs" />
+    <Compile Include="Voice\UiInvoker.cs" />
+    <Compile Include="Voice\VoiceCatalog.cs" />
+    <Compile Include="Voice\VoiceLanguage.cs" />
+    <Compile Include="Voice\VoicePreviewStore.cs" />
+    <Compile Include="Worker\AppConfig.cs" />
+    <Compile Include="Worker\AppConfigLinks.cs" />
+    <Compile Include="Worker\AppConfigResponse.cs" />
+    <Compile Include="Worker\AppRemoteConfig.cs" />
+    <Compile Include="Worker\AppRemoteLinks.cs" />
+    <Compile Include="Worker\CheckoutCompleteLink.cs" />
+    <Compile Include="Worker\CheckoutRequest.cs" />
+    <Compile Include="Worker\CheckoutResponse.cs" />
+    <Compile Include="Worker\DeepgramTokenResponse.cs" />
+    <Compile Include="Worker\DeviceRegistrationRequest.cs" />
+    <Compile Include="Worker\DeviceRegistrationStamp.cs" />
+    <Compile Include="Worker\DeviceResponse.cs" />
+    <Compile Include="Worker\DevicesResponse.cs" />
+    <Compile Include="Worker\DiscoveryChannelRequest.cs" />
+    <Compile Include="Worker\DiscoveryChannelResponse.cs" />
+    <Compile Include="Worker\EarsTranscribeRequest.cs" />
+    <Compile Include="Worker\EarsTranscribeResponse.cs" />
+    <Compile Include="Worker\ErrorReport.cs" />
+    <Compile Include="Worker\ImageSearchRequest.cs" />
+    <Compile Include="Worker\ImageSearchResponse.cs" />
+    <Compile Include="Worker\ImageSearchResult.cs" />
+    <Compile Include="Worker\InterviewLine.cs" />
+    <Compile Include="Worker\PlanSnapshot.cs" />
+    <Compile Include="Worker\PlanSubscription.cs" />
+    <Compile Include="Worker\PlanUsage.cs" />
+    <Compile Include="Worker\PlanUsageBucket.cs" />
+    <Compile Include="Worker\PortalResponse.cs" />
+    <Compile Include="Worker\RealtimeSessionPromptContext.cs" />
+    <Compile Include="Worker\RealtimeSessionRequest.cs" />
+    <Compile Include="Worker\ReferralClaimRequest.cs" />
+    <Compile Include="Worker\ReferralCodeRequest.cs" />
+    <Compile Include="Worker\ReferralOutcomeResponse.cs" />
+    <Compile Include="Worker\RegisteredDevice.cs" />
+    <Compile Include="Worker\SaturatingInt32Converter.cs" />
+    <Compile Include="Worker\SaveMemoryRequest.cs" />
+    <Compile Include="Worker\SaveMemoryResponse.cs" />
+    <Compile Include="Worker\StarterPlanClicky.cs" />
+    <Compile Include="Worker\StarterPlanClickyInput.cs" />
+    <Compile Include="Worker\StarterPlanClickyRoutine.cs" />
+    <Compile Include="Worker\StarterPlanRequest.cs" />
+    <Compile Include="Worker\StarterPlanResponse.cs" />
+    <Compile Include="Worker\StarterPlanRoutine.cs" />
+    <Compile Include="Worker\StarterPlanSuggestion.cs" />
+    <Compile Include="Worker\UsageContext.cs" />
+    <Compile Include="Worker\UserMemoryResponse.cs" />
+    <Compile Include="Worker\WebSearchRequest.cs" />
+    <Compile Include="Worker\WebSearchResponse.cs" />
+    <Compile Include="Worker\WebSearchResult.cs" />
+    <Compile Include="Worker\WorkerClient.cs" />
+    <Compile Include="Worker\WorkerHttpException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeyClicky.Contracts\HeyClicky.Contracts.csproj">
+      <Project>{D28D80BA-39C1-4855-A610-7AA12670E34A}</Project>
+      <Name>HeyClicky.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

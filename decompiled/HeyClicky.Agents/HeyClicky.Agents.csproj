@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{D28D80BA-39C1-4855-A610-7AA12670E349}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeyClicky.Agents</RootNamespace>
+    <AssemblyName>HeyClicky.Agents</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Threading.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="--y__InlineArray5.cs" />
+    <Compile Include="--z__ReadOnlyArray.cs" />
+    <Compile Include="--z__ReadOnlySingleElementList.cs" />
+    <Compile Include="AgentActivityItem.cs" />
+    <Compile Include="AgentActivityKind.cs" />
+    <Compile Include="AgentBrowserTurn.cs" />
+    <Compile Include="AgentDefaults.cs" />
+    <Compile Include="AgentFailureDescription.cs" />
+    <Compile Include="AgentLaunchPalette.cs" />
+    <Compile Include="AgentLaunchRequest.cs" />
+    <Compile Include="AgentPaywallEventArgs.cs" />
+    <Compile Include="AgentPaywallException.cs" />
+    <Compile Include="AgentPlanStep.cs" />
+    <Compile Include="AgentRuntimeOptions.cs" />
+    <Compile Include="AgentRuntimeTimings.cs" />
+    <Compile Include="AgentService.cs" />
+    <Compile Include="AgentTaskDetail.cs" />
+    <Compile Include="AgentTaskEvent.cs" />
+    <Compile Include="AgentTaskEventKind.cs" />
+    <Compile Include="AgentThreadSummary.cs" />
+    <Compile Include="AgentTranscriptTurn.cs" />
+    <Compile Include="Backend\AgentBackendException.cs" />
+    <Compile Include="Backend\AgentIntegration.cs" />
+    <Compile Include="Backend\AgentIntegrationAccount.cs" />
+    <Compile Include="Backend\AgentIntegrationCatalog.cs" />
+    <Compile Include="Backend\AgentIntegrationsApi.cs" />
+    <Compile Include="Backend\AgentIntegrationToolkit.cs" />
+    <Compile Include="Backend\AgentSessionTokenProvider.cs" />
+    <Compile Include="Backend\AgentTurnLease.cs" />
+    <Compile Include="Backend\AgentWorkerApi.cs" />
+    <Compile Include="Backend\ComposioSessionReuse.cs" />
+    <Compile Include="Backend\IntegrationSearch.cs" />
+    <Compile Include="Backend\UserMemoryCache.cs" />
+    <Compile Include="Backend\UserMemoryFetchStatus.cs" />
+    <Compile Include="Clickys\ClickyInfo.cs" />
+    <Compile Include="Clickys\ClickyStore.cs" />
+    <Compile Include="Harness\AgentHarness.cs" />
+    <Compile Include="Harness\AgentHarnessEvent.cs" />
+    <Compile Include="Harness\AgentHarnessException.cs" />
+    <Compile Include="Harness\AgentHarnessLocalMcpCommand.cs" />
+    <Compile Include="Harness\AgentHarnessMcpServer.cs" />
+    <Compile Include="Harness\AgentHarnessModel.cs" />
+    <Compile Include="Harness\AgentHarnessNames.cs" />
+    <Compile Include="Harness\AgentHarnessPlace.cs" />
+    <Compile Include="Harness\AgentHarnessPreferences.cs" />
+    <Compile Include="Harness\AgentHarnessRunnerProcess.cs" />
+    <Compile Include="Harness\AgentHarnessRunnerRuntime.cs" />
+    <Compile Include="Harness\AgentHarnessRuntimes.cs" />
+    <Compile Include="Harness\AgentHarnessThreads.cs" />
+    <Compile Include="Harness\AgentHarnessTurn.cs" />
+    <Compile Include="Harness\AgentHarnessTurnContext.cs" />
+    <Compile Include="Harness\ClickyUserSkillFolders.cs" />
+    <Compile Include="Harness\IAgentHarnessRuntime.cs" />
+    <Compile Include="Jobs\ClickyAnswer.cs" />
+    <Compile Include="Jobs\ClickyAppLiveStatus.cs" />
+    <Compile Include="Jobs\ClickyAppsPreferences.cs" />
+    <Compile Include="Jobs\ClickyAppStore.cs" />
+    <Compile Include="Jobs\ClickyArcPlan.cs" />
+    <Compile Include="Jobs\ClickyHarnessRecord.cs" />
+    <Compile Include="Jobs\ClickyHelperFiles.cs" />
+    <Compile Include="Jobs\ClickyInkWorkStep.cs" />
+    <Compile Include="Jobs\ClickyJob.cs" />
+    <Compile Include="Jobs\ClickyJobBrief.cs" />
+    <Compile Include="Jobs\ClickyJobKind.cs" />
+    <Compile Include="Jobs\ClickyJobKinds.cs" />
+    <Compile Include="Jobs\ClickyJobMessageRoute.cs" />
+    <Compile Include="Jobs\ClickyJobOutcome.cs" />
+    <Compile Include="Jobs\ClickyJobRailPhase.cs" />
+    <Compile Include="Jobs\ClickyJobRun.cs" />
+    <Compile Include="Jobs\ClickyJobsNoteSelection.cs" />
+    <Compile Include="Jobs\ClickyJobsPreferences.cs" />
+    <Compile Include="Jobs\ClickyJobStepWatcher.cs" />
+    <Compile Include="Jobs\ClickyJobStore.cs" />
+    <Compile Include="Jobs\ClickyJobUserStep.cs" />
+    <Compile Include="Jobs\ClickyLearnedHowTo.cs" />
+    <Compile Include="Jobs\ClickyLearnedHowTos.cs" />
+    <Compile Include="Jobs\ClickyLinkName.cs" />
+    <Compile Include="Jobs\ClickyLiveLine.cs" />
+    <Compile Include="Jobs\ClickyLiveLineIcon.cs" />
+    <Compile Include="Jobs\ClickyLiveNoteWriter.cs" />
+    <Compile Include="Jobs\ClickyLiveSteps.cs" />
+    <Compile Include="Jobs\ClickyMainArtifacts.cs" />
+    <Compile Include="Jobs\ClickyPendingAgentRequest.cs" />
+    <Compile Include="Jobs\ClickyPendingAgentRequestStore.cs" />
+    <Compile Include="Jobs\ClickyProgramBatch.cs" />
+    <Compile Include="Jobs\ClickyRestartInterruptions.cs" />
+    <Compile Include="Jobs\ClickyWorkEntry.cs" />
+    <Compile Include="Jobs\ClickyWorkFolderFiles.cs" />
+    <Compile Include="Jobs\ClickyWorkIndex.cs" />
+    <Compile Include="Jobs\ClickyWorkPiece.cs" />
+    <Compile Include="Jobs\ClickyWorkReplyParts.cs" />
+    <Compile Include="Jobs\ClickyWorkShelf.cs" />
+    <Compile Include="Jobs\IClickyLiveNoteTurns.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routines\ClickyRoutine.cs" />
+    <Compile Include="Routines\IRoutineHost.cs" />
+    <Compile Include="Routines\RoutineKeepAwake.cs" />
+    <Compile Include="Routines\RoutineScheduler.cs" />
+    <Compile Include="Routines\RoutinesTool.cs" />
+    <Compile Include="Routines\RoutineWakeGate.cs" />
+    <Compile Include="Runtime\CodexHomeManager.cs" />
+    <Compile Include="Runtime\CodexRolloutHistory.cs" />
+    <Compile Include="Runtime\CodexSession.cs" />
+    <Compile Include="Runtime\ComposioMcpConfiguration.cs" />
+    <Compile Include="Runtime\ComposioTurnErrors.cs" />
+    <Compile Include="Runtime\CustomConnectorRegistration.cs" />
+    <Compile Include="Runtime\CustomConnectorTransport.cs" />
+    <Compile Include="Runtime\IntegrationUse.cs" />
+    <Compile Include="Runtime\KillOnCloseJob.cs" />
+    <Compile Include="Runtime\TurnOutcome.cs" />
+    <Compile Include="Runtime\WindowsInstructionAdapter.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F438A85ABF99E47EA4FBA640CE8836B84C8719F8A5.2.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F438A85ABF99E47EA4FBA640CE8836B84C8719F8A5.cs" />
+    <Compile Include="Turns\ActivityRow.cs" />
+    <Compile Include="Turns\AgentRoutineRequest.cs" />
+    <Compile Include="Turns\AgentTask.cs" />
+    <Compile Include="Turns\ChromeTurnEnd.cs" />
+    <Compile Include="Turns\CitationMarkers.cs" />
+    <Compile Include="Turns\StandingContextLedger.cs" />
+    <Compile Include="Turns\StructuredFinalReply.cs" />
+    <Compile Include="Turns\TurnPromptBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeyClicky.Contracts\HeyClicky.Contracts.csproj">
+      <Project>{D28D80BA-39C1-4855-A610-7AA12670E34A}</Project>
+      <Name>HeyClicky.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

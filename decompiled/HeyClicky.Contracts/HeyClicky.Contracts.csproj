@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{D28D80BA-39C1-4855-A610-7AA12670E34A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeyClicky</RootNamespace>
+    <AssemblyName>HeyClicky.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Threading.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentTaskSnapshot.cs" />
+    <Compile Include="AgentTaskStatus.cs" />
+    <Compile Include="AppPaths.cs" />
+    <Compile Include="ClickTargetRing.cs" />
+    <Compile Include="ClickyEndpoints.cs" />
+    <Compile Include="ClientIdentity.cs" />
+    <Compile Include="CompanionError.cs" />
+    <Compile Include="DictationFocus.cs" />
+    <Compile Include="DictationInsertOutcome.cs" />
+    <Compile Include="DictationWorkApp.cs" />
+    <Compile Include="DisplayInfo.cs" />
+    <Compile Include="Drawing3DAvailability.cs" />
+    <Compile Include="DrawingAction.cs" />
+    <Compile Include="DrawingContinuation.cs" />
+    <Compile Include="DrawingFeedResult.cs" />
+    <Compile Include="FullscreenGuard.cs" />
+    <Compile Include="HighlightStroke.cs" />
+    <Compile Include="HotkeyBinding.cs" />
+    <Compile Include="HotkeyBindings.cs" />
+    <Compile Include="HotkeyModifiers.cs" />
+    <Compile Include="HotkeyTrigger.cs" />
+    <Compile Include="IAgentService.cs" />
+    <Compile Include="IAudioOutput.cs" />
+    <Compile Include="IAuthService.cs" />
+    <Compile Include="ICompanionSession.cs" />
+    <Compile Include="ICursorOverlay.cs" />
+    <Compile Include="IDictationTextTarget.cs" />
+    <Compile Include="IHighlightOverlay.cs" />
+    <Compile Include="IMicrophoneCapture.cs" />
+    <Compile Include="INotchPresenter.cs" />
+    <Compile Include="IPermissionService.cs" />
+    <Compile Include="IPointerInput.cs" />
+    <Compile Include="IScreenCaptureService.cs" />
+    <Compile Include="IScreenDrawingCanvas.cs" />
+    <Compile Include="IShortcutMonitor.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MemorySample.cs" />
+    <Compile Include="MicrophoneBlock.cs" />
+    <Compile Include="NonRudeWindow.cs" />
+    <Compile Include="NotchActivityPhase.cs" />
+    <Compile Include="NotchAgentFollowUp.cs" />
+    <Compile Include="NotchLiveEvent.cs" />
+    <Compile Include="NotchPresentation.cs" />
+    <Compile Include="PenStrokePath.cs" />
+    <Compile Include="PermissionKind.cs" />
+    <Compile Include="PermissionStatus.cs" />
+    <Compile Include="PointD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectD.cs" />
+    <Compile Include="ScreenCaptureFrame.cs" />
+    <Compile Include="ShellOpen.cs" />
+    <Compile Include="ShellOpenRules.cs" />
+    <Compile Include="ShortcutAction.cs" />
+    <Compile Include="UserProfile.cs" />
+    <Compile Include="VoiceState.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

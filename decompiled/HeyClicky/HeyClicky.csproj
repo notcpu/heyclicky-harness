@@ -1,0 +1,1057 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{8D5A1054-2865-4936-B5A6-FADA282F9E06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeyClicky</RootNamespace>
+    <AssemblyName>HeyClicky</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>4096</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>HeyClicky.ico</ApplicationIcon>
+    <StartupObject>HeyClicky.App.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommunityToolkit.Mvvm">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="HeyClicky.Agents">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\HeyClicky.Agents.dll</HintPath>
+    </Reference>
+    <Reference Include="HeyClicky.Contracts">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\HeyClicky.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="HeyClicky.Core">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\HeyClicky.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HeyClicky.Drawing">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\HeyClicky.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="HeyClicky.Drawing3D">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\HeyClicky.Drawing3D.dll</HintPath>
+    </Reference>
+    <Reference Include="HeyClicky.Platform">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\HeyClicky.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graphics.Canvas.Interop">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.Graphics.Canvas.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.InteractiveExperiences.Projection">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.InteractiveExperiences.Projection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Core">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.VisualBasic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core.Projection">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.Web.WebView2.Core.Projection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.SDK.NET">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.Windows.SDK.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WinUI">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Microsoft.WinUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Sentry.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="Velopack">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\Velopack.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRT.Runtime">
+      <HintPath>..\..\..\..\AppData\Local\HeyClickyApp\current\WinRT.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="--y__InlineArray11.cs" />
+    <Compile Include="--y__InlineArray15.cs" />
+    <Compile Include="--y__InlineArray2.cs" />
+    <Compile Include="--y__InlineArray3.cs" />
+    <Compile Include="--y__InlineArray4.cs" />
+    <Compile Include="--y__InlineArray5.cs" />
+    <Compile Include="--y__InlineArray7.cs" />
+    <Compile Include="--y__InlineArray8.cs" />
+    <Compile Include="--z__ReadOnlyArray.cs" />
+    <Compile Include="--z__ReadOnlyList.cs" />
+    <Compile Include="--z__ReadOnlySingleElementList.cs" />
+    <Compile Include="-Module-.cs" />
+    <Compile Include="App\AgentDetailExtensions.cs" />
+    <Compile Include="App\AgentsInkNoteHost.cs" />
+    <Compile Include="App\App.cs" />
+    <Compile Include="App\AppHost.cs" />
+    <Compile Include="App\AppOptions.cs" />
+    <Compile Include="App\ArcNotchHomeDock.cs" />
+    <Compile Include="App\Billing\BillingUi.cs" />
+    <Compile Include="App\Billing\IPaywallCardHost.cs" />
+    <Compile Include="App\Billing\PaywallCard.cs" />
+    <Compile Include="App\Billing\PaywallCloseKind.cs" />
+    <Compile Include="App\Billing\PaywallFit.cs" />
+    <Compile Include="App\Billing\PaywallPalette.cs" />
+    <Compile Include="App\Billing\PaywallWindow.cs" />
+    <Compile Include="App\Browser\ChromeAutoInstall.cs" />
+    <Compile Include="App\Browser\ChromeInternalPages.cs" />
+    <Compile Include="App\Browser\ChromeSetupBriefs.cs" />
+    <Compile Include="App\Browser\ChromeSetupFlow.cs" />
+    <Compile Include="App\Browser\ClickyDriveEnding.cs" />
+    <Compile Include="App\Browser\IChromeClickyDrive.cs" />
+    <Compile Include="App\Browser\IChromeSetupJobs.cs" />
+    <Compile Include="App\CompositionRoot.cs" />
+    <Compile Include="App\Demo\AnalyticsEndToEnd.cs" />
+    <Compile Include="App\Demo\DemoRunner.cs" />
+    <Compile Include="App\Demo\DocumentGallery.cs" />
+    <Compile Include="App\Demo\EndToEnd.cs" />
+    <Compile Include="App\Demo\IntegrationsEndToEnd.cs" />
+    <Compile Include="App\Demo\ModesEndToEnd.cs" />
+    <Compile Include="App\Demo\PortraitGallery.cs" />
+    <Compile Include="App\Demo\ReferralFixture.cs" />
+    <Compile Include="App\Demo\ScreenGrab.cs" />
+    <Compile Include="App\Demo\SettingsEndToEnd.cs" />
+    <Compile Include="App\Demo\Snapshot.cs" />
+    <Compile Include="App\Design\DS.cs" />
+    <Compile Include="App\Design\Easing.cs" />
+    <Compile Include="App\Design\NotchSprings.cs" />
+    <Compile Include="App\Design\SpringCurve.cs" />
+    <Compile Include="App\Design\SpringMove.cs" />
+    <Compile Include="App\Design\SpringValue.cs" />
+    <Compile Include="App\Design\SwiftSpring.cs" />
+    <Compile Include="App\Design\SystemEasing.cs" />
+    <Compile Include="App\DevFakes\DevShortcutMonitor.cs" />
+    <Compile Include="App\DevFakes\FakeAgentService.cs" />
+    <Compile Include="App\DevFakes\FakeAudioOutput.cs" />
+    <Compile Include="App\DevFakes\FakeAuthService.cs" />
+    <Compile Include="App\DevFakes\FakeCompanionSession.cs" />
+    <Compile Include="App\DevFakes\FakeCursorOverlay.cs" />
+    <Compile Include="App\DevFakes\FakeHighlightOverlay.cs" />
+    <Compile Include="App\DevFakes\FakeMicrophone.cs" />
+    <Compile Include="App\DevFakes\FakeNotchPresenter.cs" />
+    <Compile Include="App\DevFakes\FakePermissionService.cs" />
+    <Compile Include="App\DevFakes\FakeScreenCapture.cs" />
+    <Compile Include="App\DevFakes\WavFileMicrophone.cs" />
+    <Compile Include="App\Dock\AgentDriveJobs.cs" />
+    <Compile Include="App\Dock\AgentFocusPlace.cs" />
+    <Compile Include="App\Dock\ArcButtons.cs" />
+    <Compile Include="App\Dock\ArcCardContent.cs" />
+    <Compile Include="App\Dock\ArcCardContentSource.cs" />
+    <Compile Include="App\Dock\ArcCardState.cs" />
+    <Compile Include="App\Dock\ArcCardStates.cs" />
+    <Compile Include="App\Dock\ArcCardView.cs" />
+    <Compile Include="App\Dock\ArcChatLiveWork.cs" />
+    <Compile Include="App\Dock\ArcColors.cs" />
+    <Compile Include="App\Dock\ArcCover.cs" />
+    <Compile Include="App\Dock\ArcDock.cs" />
+    <Compile Include="App\Dock\ArcDockAnalytics.cs" />
+    <Compile Include="App\Dock\ArcDockHost.cs" />
+    <Compile Include="App\Dock\ArcDockView.cs" />
+    <Compile Include="App\Dock\ArcFileChip.cs" />
+    <Compile Include="App\Dock\ArcLatestKind.cs" />
+    <Compile Include="App\Dock\ArcLiveNote.cs" />
+    <Compile Include="App\Dock\ArcLiveNotes.cs" />
+    <Compile Include="App\Dock\ArcNextStep.cs" />
+    <Compile Include="App\Dock\ArcPaper.cs" />
+    <Compile Include="App\Dock\ArcPaperTexture.cs" />
+    <Compile Include="App\Dock\ArcPlacement.cs" />
+    <Compile Include="App\Dock\ArcProgressBar.cs" />
+    <Compile Include="App\Dock\ArcRect.cs" />
+    <Compile Include="App\Dock\ArcScreenMetrics.cs" />
+    <Compile Include="App\Dock\ArcStopButton.cs" />
+    <Compile Include="App\Dock\ArcSymbols.cs" />
+    <Compile Include="App\Dock\BreathingText.cs" />
+    <Compile Include="App\Dock\CaptionButton.cs" />
+    <Compile Include="App\Dock\CardFooterRequest.cs" />
+    <Compile Include="App\Dock\CardReadyOutput.cs" />
+    <Compile Include="App\Dock\ChatPlanFold.cs" />
+    <Compile Include="App\Dock\ChatWorkCard.cs" />
+    <Compile Include="App\Dock\ChromeIcon.cs" />
+    <Compile Include="App\Dock\ChromeSetupJobs.cs" />
+    <Compile Include="App\Dock\ClickyReadMarks.cs" />
+    <Compile Include="App\Dock\DeckFocus.cs" />
+    <Compile Include="App\Dock\DeckMoreButton.cs" />
+    <Compile Include="App\Dock\DeckPose.cs" />
+    <Compile Include="App\Dock\DeckScrollGestures.cs" />
+    <Compile Include="App\Dock\DockFiles.cs" />
+    <Compile Include="App\Dock\DockFileStyle.cs" />
+    <Compile Include="App\Dock\DockFlow.cs" />
+    <Compile Include="App\Dock\DockLaunchFlight.cs" />
+    <Compile Include="App\Dock\DockMembershipWatch.cs" />
+    <Compile Include="App\Dock\DockOrder.cs" />
+    <Compile Include="App\Dock\DockRecency.cs" />
+    <Compile Include="App\Dock\DockTimer.cs" />
+    <Compile Include="App\Dock\DockWindowKey.cs" />
+    <Compile Include="App\Dock\DriveJob.cs" />
+    <Compile Include="App\Dock\FileCard.cs" />
+    <Compile Include="App\Dock\FileCardRow.cs" />
+    <Compile Include="App\Dock\FileCardSound.cs" />
+    <Compile Include="App\Dock\FileCardStack.cs" />
+    <Compile Include="App\Dock\FirstThatFits.cs" />
+    <Compile Include="App\Dock\FirstThatFitsHorizontally.cs" />
+    <Compile Include="App\Dock\FitDecision.cs" />
+    <Compile Include="App\Dock\FooterRequestRow.cs" />
+    <Compile Include="App\Dock\GelTrack.cs" />
+    <Compile Include="App\Dock\GelTrackView.cs" />
+    <Compile Include="App\Dock\HandoffChipView.cs" />
+    <Compile Include="App\Dock\HandoffGlyph.cs" />
+    <Compile Include="App\Dock\HandoffGlyphs.cs" />
+    <Compile Include="App\Dock\JobCardText.cs" />
+    <Compile Include="App\Dock\LayoutReason.cs" />
+    <Compile Include="App\Dock\LiveLineIconStack.cs" />
+    <Compile Include="App\Dock\LiveLineView.cs" />
+    <Compile Include="App\Dock\NoteChipView.cs" />
+    <Compile Include="App\Dock\NotePaperColors.cs" />
+    <Compile Include="App\Dock\PaperStampView.cs" />
+    <Compile Include="App\Dock\PaperStock.cs" />
+    <Compile Include="App\Dock\PlanCascade.cs" />
+    <Compile Include="App\Dock\PlanRows.cs" />
+    <Compile Include="App\Dock\PlanStepRow.cs" />
+    <Compile Include="App\Dock\PlanTickBox.cs" />
+    <Compile Include="App\Dock\PointerEvaluationDriver.cs" />
+    <Compile Include="App\Dock\PoseMotion.cs" />
+    <Compile Include="App\Dock\ResultCardFace.cs" />
+    <Compile Include="App\Dock\ResultCardLayouts.cs" />
+    <Compile Include="App\Dock\SentenceBreaks.cs" />
+    <Compile Include="App\Dock\ShimmerSweep.cs" />
+    <Compile Include="App\Dock\ShrinkToFit.cs" />
+    <Compile Include="App\Dock\StickyPreviewLayout.cs" />
+    <Compile Include="App\Dock\TopArcGreetingLayout.cs" />
+    <Compile Include="App\Dock\TopArcLayout.cs" />
+    <Compile Include="App\Dock\TypingDots.cs" />
+    <Compile Include="App\Documents\DocumentViewers.cs" />
+    <Compile Include="App\Documents\MarkdownFontWeight.cs" />
+    <Compile Include="App\Documents\MarkdownViewerBufferExtensions.cs" />
+    <Compile Include="App\Documents\MarkdownViewerContent.cs" />
+    <Compile Include="App\Documents\MarkdownViewerDocumentModel.cs" />
+    <Compile Include="App\Documents\MarkdownViewerFileWatcher.cs" />
+    <Compile Include="App\Documents\MarkdownViewerFonts.cs" />
+    <Compile Include="App\Documents\MarkdownViewerImage.cs" />
+    <Compile Include="App\Documents\MarkdownViewerInlineDocument.cs" />
+    <Compile Include="App\Documents\MarkdownViewerLinks.cs" />
+    <Compile Include="App\Documents\MarkdownViewerMetrics.cs" />
+    <Compile Include="App\Documents\MarkdownViewerPalette.cs" />
+    <Compile Include="App\Documents\MarkdownViewerPreparedDocument.cs" />
+    <Compile Include="App\Documents\MarkdownViewerTableContent.cs" />
+    <Compile Include="App\Documents\MarkdownViewerTableView.cs" />
+    <Compile Include="App\Documents\MarkdownViewerTextView.cs" />
+    <Compile Include="App\Documents\NotchDocumentRenderer.cs" />
+    <Compile Include="App\Documents\SpreadsheetAssetCache.cs" />
+    <Compile Include="App\Documents\SpreadsheetChromePalette.cs" />
+    <Compile Include="App\Documents\SpreadsheetDocumentView.cs" />
+    <Compile Include="App\Documents\SpreadsheetGridPalette.cs" />
+    <Compile Include="App\Documents\SpreadsheetGridRenderer.cs" />
+    <Compile Include="App\Documents\SpreadsheetGridView.cs" />
+    <Compile Include="App\Documents\SpreadsheetPaneGeometry.cs" />
+    <Compile Include="App\Documents\SpreadsheetPreview.cs" />
+    <Compile Include="App\Documents\SpreadsheetSelection.cs" />
+    <Compile Include="App\Documents\SpreadsheetSelectionSummary.cs" />
+    <Compile Include="App\Documents\SpreadsheetTextAttributes.cs" />
+    <Compile Include="App\DrawnOnboardingNotch.cs" />
+    <Compile Include="App\Drive\AgentDriveBinding.cs" />
+    <Compile Include="App\Drive\AgentDriveConsent.cs" />
+    <Compile Include="App\Drive\ChromeSetupDrive.cs" />
+    <Compile Include="App\Drive\ClickyTakeOverController.cs" />
+    <Compile Include="App\Drive\DriveArt.cs" />
+    <Compile Include="App\Drive\DriveNotchOwnership.cs" />
+    <Compile Include="App\Drive\IAgentDriveJob.cs" />
+    <Compile Include="App\Drive\IAgentDriveJobs.cs" />
+    <Compile Include="App\Drive\OnboardingDriveContext.cs" />
+    <Compile Include="App\Drive\OnboardingDriveDemo.cs" />
+    <Compile Include="App\Drive\TakeOverConsentCard.cs" />
+    <Compile Include="App\Drive\TakeOverOverlay.cs" />
+    <Compile Include="App\Drive\UploadApprovalCard.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\Activator.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\AddToCollection.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\AddToDictionary.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\BoxInstanceMethod.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\CreateFromStringMethod.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\Getter.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\Setter.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\StaticInitializer.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\XamlMember.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\XamlMetaDataProvider.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\XamlSystemBaseType.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\XamlTypeInfoProvider.cs" />
+    <Compile Include="App\HeyClicky_App_XamlTypeInfo\XamlUserType.cs" />
+    <Compile Include="App\Home\AgentHomeSource.cs" />
+    <Compile Include="App\Home\ArtifactPaths.cs" />
+    <Compile Include="App\Home\ArtifactThumbnails.cs" />
+    <Compile Include="App\Home\ChatBlockViews.cs" />
+    <Compile Include="App\Home\DemoFiles.cs" />
+    <Compile Include="App\Home\DemoHomeSource.cs" />
+    <Compile Include="App\Home\DrawingSaveOffer.cs" />
+    <Compile Include="App\Home\HomeMetrics.cs" />
+    <Compile Include="App\Home\HomeParts.cs" />
+    <Compile Include="App\Home\HomeTheme.cs" />
+    <Compile Include="App\Home\IHomeSource.cs" />
+    <Compile Include="App\Home\LessonPrinter.cs" />
+    <Compile Include="App\Home\LessonService.cs" />
+    <Compile Include="App\Home\LessonStore.cs" />
+    <Compile Include="App\Home\LessonVoice.cs" />
+    <Compile Include="App\Home\MessagesPalette.cs" />
+    <Compile Include="App\Home\StoredLesson.cs" />
+    <Compile Include="App\Home\WebPageSnapshotter.cs" />
+    <Compile Include="App\Home\WrapPanel.cs" />
+    <Compile Include="App\Ink\ClickyArcPlanNotes.cs" />
+    <Compile Include="App\Ink\ClickyBaselinePlaced.cs" />
+    <Compile Include="App\Ink\ClickyBrandMark.cs" />
+    <Compile Include="App\Ink\ClickyBrandMarkShape.cs" />
+    <Compile Include="App\Ink\ClickyCardFace.cs" />
+    <Compile Include="App\Ink\ClickyCardSparkline.cs" />
+    <Compile Include="App\Ink\ClickyCardView.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackFitOrScroll.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackHighlight.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkCard.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkFace.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkFooter.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkHeader.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkLead.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkLook.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkPaper.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkPresentation.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkPulledCard.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkReadings.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkScreenPaper.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkStates.cs" />
+    <Compile Include="App\Ink\ClickyEdgeStackInkTape.cs" />
+    <Compile Include="App\Ink\ClickyHandLineBreaker.cs" />
+    <Compile Include="App\Ink\ClickyHandRing.cs" />
+    <Compile Include="App\Ink\ClickyHandText.cs" />
+    <Compile Include="App\Ink\ClickyHandTextMetrics.cs" />
+    <Compile Include="App\Ink\ClickyHomeRendering.cs" />
+    <Compile Include="App\Ink\ClickyHomeSpreadPaper.cs" />
+    <Compile Include="App\Ink\ClickyInkActedOn.cs" />
+    <Compile Include="App\Ink\ClickyInkActions.cs" />
+    <Compile Include="App\Ink\ClickyInkAnswer.cs" />
+    <Compile Include="App\Ink\ClickyInkApprovedStamp.cs" />
+    <Compile Include="App\Ink\ClickyInkArrowStroke.cs" />
+    <Compile Include="App\Ink\ClickyInkAsks.cs" />
+    <Compile Include="App\Ink\ClickyInkAudioPlayer.cs" />
+    <Compile Include="App\Ink\ClickyInkBarcode.cs" />
+    <Compile Include="App\Ink\ClickyInkBlankLeader.cs" />
+    <Compile Include="App\Ink\ClickyInkBlankLine.cs" />
+    <Compile Include="App\Ink\ClickyInkBottomClip.cs" />
+    <Compile Include="App\Ink\ClickyInkBox.cs" />
+    <Compile Include="App\Ink\ClickyInkCardSubject.cs" />
+    <Compile Include="App\Ink\ClickyInkCentered.cs" />
+    <Compile Include="App\Ink\ClickyInkCenteredOverflow.cs" />
+    <Compile Include="App\Ink\ClickyInkChart.cs" />
+    <Compile Include="App\Ink\ClickyInkClickyLive.cs" />
+    <Compile Include="App\Ink\ClickyInkClickyPhase.cs" />
+    <Compile Include="App\Ink\ClickyInkClipping.cs" />
+    <Compile Include="App\Ink\ClickyInkConnect.cs" />
+    <Compile Include="App\Ink\ClickyInkCountdown.cs" />
+    <Compile Include="App\Ink\ClickyInkCriteria.cs" />
+    <Compile Include="App\Ink\ClickyInkCrossOut.cs" />
+    <Compile Include="App\Ink\ClickyInkDashboardCanvas.cs" />
+    <Compile Include="App\Ink\ClickyInkDashboardFaceView.cs" />
+    <Compile Include="App\Ink\ClickyInkDashboardFormNeeds.cs" />
+    <Compile Include="App\Ink\ClickyInkDashboardPalette.cs" />
+    <Compile Include="App\Ink\ClickyInkDashboardRows.cs" />
+    <Compile Include="App\Ink\ClickyInkDashboardView.cs" />
+    <Compile Include="App\Ink\ClickyInkDay.cs" />
+    <Compile Include="App\Ink\ClickyInkDeltaTag.cs" />
+    <Compile Include="App\Ink\ClickyInkDeskView.cs" />
+    <Compile Include="App\Ink\ClickyInkEdgeCardEnvironment.cs" />
+    <Compile Include="App\Ink\ClickyInkEdgeCardLayout.cs" />
+    <Compile Include="App\Ink\ClickyInkEditionView.cs" />
+    <Compile Include="App\Ink\ClickyInkEnvironment.cs" />
+    <Compile Include="App\Ink\ClickyInkEvent.cs" />
+    <Compile Include="App\Ink\ClickyInkFaceView.cs" />
+    <Compile Include="App\Ink\ClickyInkFigures.cs" />
+    <Compile Include="App\Ink\ClickyInkFileCard.cs" />
+    <Compile Include="App\Ink\ClickyInkFileEntry.cs" />
+    <Compile Include="App\Ink\ClickyInkFilePicker.cs" />
+    <Compile Include="App\Ink\ClickyInkFill.cs" />
+    <Compile Include="App\Ink\ClickyInkFlap.cs" />
+    <Compile Include="App\Ink\ClickyInkForm.cs" />
+    <Compile Include="App\Ink\ClickyInkFormKit.cs" />
+    <Compile Include="App\Ink\ClickyInkFrontPagePlans.cs" />
+    <Compile Include="App\Ink\ClickyInkFrontPageView.cs" />
+    <Compile Include="App\Ink\ClickyInkGallery.cs" />
+    <Compile Include="App\Ink\ClickyInkGalleryTile.cs" />
+    <Compile Include="App\Ink\ClickyInkGroupView.cs" />
+    <Compile Include="App\Ink\ClickyInkGrow.cs" />
+    <Compile Include="App\Ink\ClickyInkHatch.cs" />
+    <Compile Include="App\Ink\ClickyInkHeightMorph.cs" />
+    <Compile Include="App\Ink\ClickyInkHStack.cs" />
+    <Compile Include="App\Ink\ClickyInkIcon.cs" />
+    <Compile Include="App\Ink\ClickyInkImages.cs" />
+    <Compile Include="App\Ink\ClickyInkInlineAnswerField.cs" />
+    <Compile Include="App\Ink\ClickyInkItemsList.cs" />
+    <Compile Include="App\Ink\ClickyInkJob.cs" />
+    <Compile Include="App\Ink\ClickyInkJobPhase.cs" />
+    <Compile Include="App\Ink\ClickyInkLamp.cs" />
+    <Compile Include="App\Ink\ClickyInkLayout.cs" />
+    <Compile Include="App\Ink\ClickyInkLeader.cs" />
+    <Compile Include="App\Ink\ClickyInkLetter.cs" />
+    <Compile Include="App\Ink\ClickyInkLine.cs" />
+    <Compile Include="App\Ink\ClickyInkLinkPreviewPlate.cs" />
+    <Compile Include="App\Ink\ClickyInkList.cs" />
+    <Compile Include="App\Ink\ClickyInkLiveNoteTurns.cs" />
+    <Compile Include="App\Ink\ClickyInkLuggageTagShape.cs" />
+    <Compile Include="App\Ink\ClickyInkMadeLinkCard.cs" />
+    <Compile Include="App\Ink\ClickyInkMarginNote.cs" />
+    <Compile Include="App\Ink\ClickyInkMaskingTape.cs" />
+    <Compile Include="App\Ink\ClickyInkMiddleTruncation.cs" />
+    <Compile Include="App\Ink\ClickyInkMiniTile.cs" />
+    <Compile Include="App\Ink\ClickyInkNoteBridge.cs" />
+    <Compile Include="App\Ink\ClickyInkNoteConnect.cs" />
+    <Compile Include="App\Ink\ClickyInkNoteTarget.cs" />
+    <Compile Include="App\Ink\ClickyInkObjectFonts.cs" />
+    <Compile Include="App\Ink\ClickyInkObjectKit.cs" />
+    <Compile Include="App\Ink\ClickyInkOverlay.cs" />
+    <Compile Include="App\Ink\ClickyInkPageView.cs" />
+    <Compile Include="App\Ink\ClickyInkPagination.cs" />
+    <Compile Include="App\Ink\ClickyInkPencilGlyph.cs" />
+    <Compile Include="App\Ink\ClickyInkPencilLayers.cs" />
+    <Compile Include="App\Ink\ClickyInkPhotos.cs" />
+    <Compile Include="App\Ink\ClickyInkPicture.cs" />
+    <Compile Include="App\Ink\ClickyInkPipelineView.cs" />
+    <Compile Include="App\Ink\ClickyInkPlace.cs" />
+    <Compile Include="App\Ink\ClickyInkPolaroidPicture.cs" />
+    <Compile Include="App\Ink\ClickyInkProgressBar.cs" />
+    <Compile Include="App\Ink\ClickyInkProgressView.cs" />
+    <Compile Include="App\Ink\ClickyInkProse.cs" />
+    <Compile Include="App\Ink\ClickyInkQuestion.cs" />
+    <Compile Include="App\Ink\ClickyInkQuestionAnswers.cs" />
+    <Compile Include="App\Ink\ClickyInkQuiet.cs" />
+    <Compile Include="App\Ink\ClickyInkQuiz.cs" />
+    <Compile Include="App\Ink\ClickyInkReceipt.cs" />
+    <Compile Include="App\Ink\ClickyInkReceiptLine.cs" />
+    <Compile Include="App\Ink\ClickyInkRestingPencil.cs" />
+    <Compile Include="App\Ink\ClickyInkReviewCompactLine.cs" />
+    <Compile Include="App\Ink\ClickyInkReviewList.cs" />
+    <Compile Include="App\Ink\ClickyInkRoutineEditor.cs" />
+    <Compile Include="App\Ink\ClickyInkRoutineStatusLine.cs" />
+    <Compile Include="App\Ink\ClickyInkRubberStamp.cs" />
+    <Compile Include="App\Ink\ClickyInkRuledBox.cs" />
+    <Compile Include="App\Ink\ClickyInkRuledLine.cs" />
+    <Compile Include="App\Ink\ClickyInkRunStamp.cs" />
+    <Compile Include="App\Ink\ClickyInkRunStampMark.cs" />
+    <Compile Include="App\Ink\ClickyInkShadowedShape.cs" />
+    <Compile Include="App\Ink\ClickyInkShadowPictures.cs" />
+    <Compile Include="App\Ink\ClickyInkSheetRowView.cs" />
+    <Compile Include="App\Ink\ClickyInkSheetView.cs" />
+    <Compile Include="App\Ink\ClickyInkSketch.cs" />
+    <Compile Include="App\Ink\ClickyInkSketchBar.cs" />
+    <Compile Include="App\Ink\ClickyInkSketchPainter.cs" />
+    <Compile Include="App\Ink\ClickyInkSources.cs" />
+    <Compile Include="App\Ink\ClickyInkSpacer.cs" />
+    <Compile Include="App\Ink\ClickyInkSpark.cs" />
+    <Compile Include="App\Ink\ClickyInkSparkLine.cs" />
+    <Compile Include="App\Ink\ClickyInkSquiggle.cs" />
+    <Compile Include="App\Ink\ClickyInkStatusBoard.cs" />
+    <Compile Include="App\Ink\ClickyInkStickies.cs" />
+    <Compile Include="App\Ink\ClickyInkStreak.cs" />
+    <Compile Include="App\Ink\ClickyInkStreakBoxes.cs" />
+    <Compile Include="App\Ink\ClickyInkSupportingFiles.cs" />
+    <Compile Include="App\Ink\ClickyInkTable.cs" />
+    <Compile Include="App\Ink\ClickyInkTag.cs" />
+    <Compile Include="App\Ink\ClickyInkTally.cs" />
+    <Compile Include="App\Ink\ClickyInkTallyMarks.cs" />
+    <Compile Include="App\Ink\ClickyInkTick.cs" />
+    <Compile Include="App\Ink\ClickyInkTicket.cs" />
+    <Compile Include="App\Ink\ClickyInkTicketShape.cs" />
+    <Compile Include="App\Ink\ClickyInkTickingNumber.cs" />
+    <Compile Include="App\Ink\ClickyInkTile.cs" />
+    <Compile Include="App\Ink\ClickyInkTiles.cs" />
+    <Compile Include="App\Ink\ClickyInkTimeline.cs" />
+    <Compile Include="App\Ink\ClickyInkTodo.cs" />
+    <Compile Include="App\Ink\ClickyInkTopOfNote.cs" />
+    <Compile Include="App\Ink\ClickyInkTornStrip.cs" />
+    <Compile Include="App\Ink\ClickyInkTornTape.cs" />
+    <Compile Include="App\Ink\ClickyInkUnder.cs" />
+    <Compile Include="App\Ink\ClickyInkWasValue.cs" />
+    <Compile Include="App\Ink\ClickyInkWordsView.cs" />
+    <Compile Include="App\Ink\ClickyInkYouSaidSlip.cs" />
+    <Compile Include="App\Ink\ClickyInkZigzagFoot.cs" />
+    <Compile Include="App\Ink\ClickyNotebookFlow.cs" />
+    <Compile Include="App\Ink\ClickyNotebookWritingPencil.cs" />
+    <Compile Include="App\Ink\ClickyNoteFace.cs" />
+    <Compile Include="App\Ink\ClickyNotePaperColors.cs" />
+    <Compile Include="App\Ink\ClickyNoteShape.cs" />
+    <Compile Include="App\Ink\ClickyNoteView.cs" />
+    <Compile Include="App\Ink\ClickyPaperBoardDots.cs" />
+    <Compile Include="App\Ink\ClickyPaperFileChip.cs" />
+    <Compile Include="App\Ink\ClickyPaperFileKind.cs" />
+    <Compile Include="App\Ink\ClickyPaperFileKinds.cs" />
+    <Compile Include="App\Ink\ClickyPaperFonts.cs" />
+    <Compile Include="App\Ink\ClickyPaperGel.cs" />
+    <Compile Include="App\Ink\ClickyPaperGelButton.cs" />
+    <Compile Include="App\Ink\ClickyPaperGelPlate.cs" />
+    <Compile Include="App\Ink\ClickyPaperGelStyle.cs" />
+    <Compile Include="App\Ink\ClickyPaperGlyph.cs" />
+    <Compile Include="App\Ink\ClickyPaperGlyphs.cs" />
+    <Compile Include="App\Ink\ClickyPaperGlyphView.cs" />
+    <Compile Include="App\Ink\ClickyPaperGrain.cs" />
+    <Compile Include="App\Ink\ClickyPaperInk.cs" />
+    <Compile Include="App\Ink\ClickyPaperProgressBar.cs" />
+    <Compile Include="App\Ink\ClickyPaperRandom.cs" />
+    <Compile Include="App\Ink\ClickyPaperStamp.cs" />
+    <Compile Include="App\Ink\ClickyPaperStatusTag.cs" />
+    <Compile Include="App\Ink\ClickyPaperSticker.cs" />
+    <Compile Include="App\Ink\ClickyPaperStickerKind.cs" />
+    <Compile Include="App\Ink\ClickyPaperStickerKindStyle.cs" />
+    <Compile Include="App\Ink\ClickyPaperStock.cs" />
+    <Compile Include="App\Ink\ClickyPaperStockStyle.cs" />
+    <Compile Include="App\Ink\ClickyPaperStripes.cs" />
+    <Compile Include="App\Ink\ClickyPaperTextures.cs" />
+    <Compile Include="App\Ink\ClickyShape.cs" />
+    <Compile Include="App\Ink\ClickyShapeTrim.cs" />
+    <Compile Include="App\Ink\ClickyShapeView.cs" />
+    <Compile Include="App\Ink\ClickySketchBar.cs" />
+    <Compile Include="App\Ink\ClickySketchButton.cs" />
+    <Compile Include="App\Ink\ClickySketchButtonKind.cs" />
+    <Compile Include="App\Ink\ClickySketchButtonKindStyle.cs" />
+    <Compile Include="App\Ink\ClickySketchCard.cs" />
+    <Compile Include="App\Ink\ClickySketchCardMetrics.cs" />
+    <Compile Include="App\Ink\ClickySketchCheck.cs" />
+    <Compile Include="App\Ink\ClickySketchIconTile.cs" />
+    <Compile Include="App\Ink\ClickySketchInk.cs" />
+    <Compile Include="App\Ink\ClickySketchLabel.cs" />
+    <Compile Include="App\Ink\ClickySketchLink.cs" />
+    <Compile Include="App\Ink\ClickySketchMeter.cs" />
+    <Compile Include="App\Ink\ClickySketchPath.cs" />
+    <Compile Include="App\Ink\ClickySketchPressStyle.cs" />
+    <Compile Include="App\Ink\ClickySketchRandom.cs" />
+    <Compile Include="App\Ink\ClickySketchRect.cs" />
+    <Compile Include="App\Ink\ClickySketchSegmented.cs" />
+    <Compile Include="App\Ink\ClickySketchShapeView.cs" />
+    <Compile Include="App\Ink\ClickySketchSlider.cs" />
+    <Compile Include="App\Ink\ClickySketchSwatch.cs" />
+    <Compile Include="App\Ink\ClickySketchTip.cs" />
+    <Compile Include="App\Ink\ClickySketchToggle.cs" />
+    <Compile Include="App\Ink\ClickySketchToggleRow.cs" />
+    <Compile Include="App\Ink\ClickySketchTone.cs" />
+    <Compile Include="App\Ink\ClickySketchToneStyle.cs" />
+    <Compile Include="App\Ink\ClickySVGPath.cs" />
+    <Compile Include="App\Ink\ClickyThingStatus.cs" />
+    <Compile Include="App\Ink\ClickyThingStatusStyle.cs" />
+    <Compile Include="App\Ink\ClickyWobblyRect.cs" />
+    <Compile Include="App\Ink\ClickyWritingCaret.cs" />
+    <Compile Include="App\Ink\DispatcherTimerHandle.cs" />
+    <Compile Include="App\Ink\IClickyInkClocked.cs" />
+    <Compile Include="App\Ink\IClickyInkNoteHost.cs" />
+    <Compile Include="App\Ink\IClickyShape.cs" />
+    <Compile Include="App\Ink\IInkBaseline.cs" />
+    <Compile Include="App\Ink\InkBaseline.cs" />
+    <Compile Include="App\Ink\InkDashboardLayout.cs" />
+    <Compile Include="App\Ink\InkMiddleTruncatedText.cs" />
+    <Compile Include="App\Ink\InkObjectFonts.cs" />
+    <Compile Include="App\Ink\InkObjectHost.cs" />
+    <Compile Include="App\Ink\InkObjectState.cs" />
+    <Compile Include="App\Ink\InkPaperSheet.cs" />
+    <Compile Include="App\Ink\InkSpring.cs" />
+    <Compile Include="App\Ink\InkTextMetrics.cs" />
+    <Compile Include="App\Ink\InkTextView.cs" />
+    <Compile Include="App\Ink\InkVerticalAlignment.cs" />
+    <Compile Include="App\Ink\InkViewModifiers.cs" />
+    <Compile Include="App\Ink\InkViews.cs" />
+    <Compile Include="App\Ink\InkViewThatFits.cs" />
+    <Compile Include="App\Ink\PaperColor.cs" />
+    <Compile Include="App\Ink\PaperDrawing.cs" />
+    <Compile Include="App\Ink\PaperFill.cs" />
+    <Compile Include="App\Ink\PaperFont.cs" />
+    <Compile Include="App\Ink\PaperPath.cs" />
+    <Compile Include="App\Ink\PaperShadow.cs" />
+    <Compile Include="App\Ink\PaperShadowView.cs" />
+    <Compile Include="App\Ink\PaperStroke.cs" />
+    <Compile Include="App\Ink\PaperSurface.cs" />
+    <Compile Include="App\Ink\PaperText.cs" />
+    <Compile Include="App\Ink\PaperWash.cs" />
+    <Compile Include="App\Ink\PaperWashExtensions.cs" />
+    <Compile Include="App\Interop\FileSecurityProperties.cs" />
+    <Compile Include="App\Interop\FolderDialog.cs" />
+    <Compile Include="App\Interop\Native.cs" />
+    <Compile Include="App\Interop\VirtualDesktops.cs" />
+    <Compile Include="App\Interop\WindowSubclass.cs" />
+    <Compile Include="App\Notch\INotchHost.cs" />
+    <Compile Include="App\Notch\NotchAccessibility.cs" />
+    <Compile Include="App\Notch\NotchCornerGlow.cs" />
+    <Compile Include="App\Notch\NotchGeometry.cs" />
+    <Compile Include="App\Notch\NotchPreferences.cs" />
+    <Compile Include="App\Notch\NotchSilhouette.cs" />
+    <Compile Include="App\Notch\NotchSurface.cs" />
+    <Compile Include="App\Notch\NotchSurfaces.cs" />
+    <Compile Include="App\Notch\NotchSystemLayer.cs" />
+    <Compile Include="App\Notch\NotchSystemShape.cs" />
+    <Compile Include="App\Notch\NotchView.cs" />
+    <Compile Include="App\Notch\NotchWorkingSweep.cs" />
+    <Compile Include="App\Notch\Peek\ArcVoicePill.cs" />
+    <Compile Include="App\Notch\Peek\ChatBubbles.cs" />
+    <Compile Include="App\Notch\Peek\ChatDrawingRow.cs" />
+    <Compile Include="App\Notch\Peek\ChatHandOffRow.cs" />
+    <Compile Include="App\Notch\Peek\ChatMessageRow.cs" />
+    <Compile Include="App\Notch\Peek\ChatRowLayout.cs" />
+    <Compile Include="App\Notch\Peek\ChatSentAttachments.cs" />
+    <Compile Include="App\Notch\Peek\ChatSitesReadChip.cs" />
+    <Compile Include="App\Notch\Peek\ChatStamp.cs" />
+    <Compile Include="App\Notch\Peek\ChatTextRow.cs" />
+    <Compile Include="App\Notch\Peek\ClickyDrawingLaptopScreen.cs" />
+    <Compile Include="App\Notch\Peek\ClickyDrawingTint.cs" />
+    <Compile Include="App\Notch\Peek\ClickyDrawingWindowView.cs" />
+    <Compile Include="App\Notch\Peek\ClickyDrawingWindowViewer.cs" />
+    <Compile Include="App\Notch\Peek\ClickyLessonInlinePlayer.cs" />
+    <Compile Include="App\Notch\Peek\IChatLiveWork.cs" />
+    <Compile Include="App\Notch\Peek\IHeyClickyWindowHost.cs" />
+    <Compile Include="App\Notch\Peek\INotchDocumentRenderer.cs" />
+    <Compile Include="App\Notch\Peek\INotchHomeDock.cs" />
+    <Compile Include="App\Notch\Peek\INotchUpdateContentSource.cs" />
+    <Compile Include="App\Notch\Peek\NotchChat.cs" />
+    <Compile Include="App\Notch\Peek\NotchChatComposer.cs" />
+    <Compile Include="App\Notch\Peek\NotchChatResizeGrip.cs" />
+    <Compile Include="App\Notch\Peek\NotchChatResizeGrips.cs" />
+    <Compile Include="App\Notch\Peek\NotchChatSize.cs" />
+    <Compile Include="App\Notch\Peek\NotchChatView.cs" />
+    <Compile Include="App\Notch\Peek\NotchDocumentHeaderRow.cs" />
+    <Compile Include="App\Notch\Peek\NotchDocumentRenderers.cs" />
+    <Compile Include="App\Notch\Peek\NotchDocumentStyle.cs" />
+    <Compile Include="App\Notch\Peek\NotchDocumentViewer.cs" />
+    <Compile Include="App\Notch\Peek\NotchExtensions.cs" />
+    <Compile Include="App\Notch\Peek\NotchFullReply.cs" />
+    <Compile Include="App\Notch\Peek\NotchGreeting.cs" />
+    <Compile Include="App\Notch\Peek\NotchHomeTab.cs" />
+    <Compile Include="App\Notch\Peek\NotchPeekLayout.cs" />
+    <Compile Include="App\Notch\Peek\NotchPeekSurface.cs" />
+    <Compile Include="App\Notch\Peek\NotchSettingsTab.cs" />
+    <Compile Include="App\Notch\Peek\NotchTabSwitcher.cs" />
+    <Compile Include="App\Notch\Peek\NotchTopFade.cs" />
+    <Compile Include="App\Notch\Peek\NotchUpdateButton.cs" />
+    <Compile Include="App\Notch\Peek\NotchUpdateContent.cs" />
+    <Compile Include="App\Notch\Peek\NotchUpdateReadyOutput.cs" />
+    <Compile Include="App\Notch\Peek\NotchUpdateRequest.cs" />
+    <Compile Include="App\Notch\Peek\NotchUsagePill.cs" />
+    <Compile Include="App\Notch\Peek\NotchVoicePill.cs" />
+    <Compile Include="App\Notch\Peek\ReadAloudSwitch.cs" />
+    <Compile Include="App\Notch\Surfaces\ActivityIndicators.cs" />
+    <Compile Include="App\Notch\Surfaces\ActivityPhase.cs" />
+    <Compile Include="App\Notch\Surfaces\ActivitySurface.cs" />
+    <Compile Include="App\Notch\Surfaces\AgentColors.cs" />
+    <Compile Include="App\Notch\Surfaces\AgentTaskSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\AppTipSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\AppUpdatedSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\CardParts.cs" />
+    <Compile Include="App\Notch\Surfaces\ClickyUpdateLayout.cs" />
+    <Compile Include="App\Notch\Surfaces\ClickyUpdateSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\ComposerBox.cs" />
+    <Compile Include="App\Notch\Surfaces\ComputerMark.cs" />
+    <Compile Include="App\Notch\Surfaces\DictationClipboardSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\DictionaryLearnedSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\DocumentAccessSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\HandoffSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\IntegrationConnectedSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\IntegrationSuggestionSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\IntroSkillPingSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\MeetingCountdownSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\MicrophoneTroubleSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\MorningSuggestionsSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\MutedSpeakerSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\NotchRestingMarkState.cs" />
+    <Compile Include="App\Notch\Surfaces\NotchUpdateCardAnalytics.cs" />
+    <Compile Include="App\Notch\Surfaces\OnboardingCardSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\RestingMarkSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\SkillPinnedSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\TextInputSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\TextResponseSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\TutorialInviteSurface.cs" />
+    <Compile Include="App\Notch\Surfaces\UseCaseCarousel.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindow.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindowComposerBacking.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindowConversation.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindowFlightSpring.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindowHost.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindowOpeningFlight.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindowPalette.cs" />
+    <Compile Include="App\Notch\Window\HeyClickyWindowUsageRing.cs" />
+    <Compile Include="App\Notch\Window\SystemLookWatcher.cs" />
+    <Compile Include="App\Notch\Window\UIElementCollectionExtensions.cs" />
+    <Compile Include="App\Onboarding\CompositorSpringMotion.cs" />
+    <Compile Include="App\Onboarding\CursorCompanion.cs" />
+    <Compile Include="App\Onboarding\DrawStepStagePolicy.cs" />
+    <Compile Include="App\Onboarding\GelSelectionBorder.cs" />
+    <Compile Include="App\Onboarding\HatchFlightOverlay.cs" />
+    <Compile Include="App\Onboarding\HomeTour.cs" />
+    <Compile Include="App\Onboarding\IntegrationCatalog.cs" />
+    <Compile Include="App\Onboarding\InterviewController.cs" />
+    <Compile Include="App\Onboarding\InterviewFieldFocusPolicy.cs" />
+    <Compile Include="App\Onboarding\InterviewStage.cs" />
+    <Compile Include="App\Onboarding\InterviewThoughtBubbles.cs" />
+    <Compile Include="App\Onboarding\IntroWindow.cs" />
+    <Compile Include="App\Onboarding\KeyCap.cs" />
+    <Compile Include="App\Onboarding\MicMeter.cs" />
+    <Compile Include="App\Onboarding\NewAgentsUiDemoPlan.cs" />
+    <Compile Include="App\Onboarding\OnboardingDemoPointer.cs" />
+    <Compile Include="App\Onboarding\ProgressDots.cs" />
+    <Compile Include="App\Onboarding\SayLines.cs" />
+    <Compile Include="App\Onboarding\SpokenBubble.cs" />
+    <Compile Include="App\Onboarding\SpringAxis.cs" />
+    <Compile Include="App\Onboarding\StarterCast.cs" />
+    <Compile Include="App\Onboarding\StepInteractiveSlot.cs" />
+    <Compile Include="App\Onboarding\TourDrive.cs" />
+    <Compile Include="App\Onboarding\TourMotion.cs" />
+    <Compile Include="App\Onboarding\TourStepNotes.cs" />
+    <Compile Include="App\Onboarding\TutorialWindow.cs" />
+    <Compile Include="App\OneBrain\ClickyTourJob.cs" />
+    <Compile Include="App\OneBrain\ClickyTourJobCardLayout.cs" />
+    <Compile Include="App\OneBrain\ClickyTourJobCards.cs" />
+    <Compile Include="App\OneBrain\DrawnOnboardingFinalePrefetch.cs" />
+    <Compile Include="App\OneBrain\DrawnOnboardingNotchShowcase.cs" />
+    <Compile Include="App\OneBrain\DrawnOnboardingTour.cs" />
+    <Compile Include="App\OneBrain\GoodMorningBrief.cs" />
+    <Compile Include="App\OneBrain\TourJobCardContent.cs" />
+    <Compile Include="App\OneBrain\TourPaperStock.cs" />
+    <Compile Include="App\OneBrain\TourPaperStocks.cs" />
+    <Compile Include="App\Portraits\-PortraitWash-F2FF3F8DF461DCABE6D955F65C17EB9EF429F49A32432E.cs" />
+    <Compile Include="App\Portraits\ClickyFace.cs" />
+    <Compile Include="App\Portraits\ClickyLedgeHand.cs" />
+    <Compile Include="App\Portraits\ClickyRoster.cs" />
+    <Compile Include="App\Portraits\CloudFaceTraits.cs" />
+    <Compile Include="App\Portraits\Colorway.cs" />
+    <Compile Include="App\Portraits\HairPiece.cs" />
+    <Compile Include="App\Portraits\Hairstyle.cs" />
+    <Compile Include="App\Portraits\Outfit.cs" />
+    <Compile Include="App\Portraits\PieceFill.cs" />
+    <Compile Include="App\Portraits\PortraitAppearance.cs" />
+    <Compile Include="App\Portraits\PortraitAppearanceJsonConverter.cs" />
+    <Compile Include="App\Portraits\PortraitArt.cs" />
+    <Compile Include="App\Portraits\PortraitCharacter.cs" />
+    <Compile Include="App\Portraits\PortraitData.cs" />
+    <Compile Include="App\Portraits\PortraitExpression.cs" />
+    <Compile Include="App\Portraits\PortraitMood.cs" />
+    <Compile Include="App\Portraits\PortraitPack.cs" />
+    <Compile Include="App\Portraits\PortraitReaction.cs" />
+    <Compile Include="App\Portraits\PortraitView.cs" />
+    <Compile Include="App\Portraits\PortraitWash.cs" />
+    <Compile Include="App\Portraits\PPath.cs" />
+    <Compile Include="App\Portraits\RosterClicky.cs" />
+    <Compile Include="App\Portraits\SkinTone.cs" />
+    <Compile Include="App\Portraits\StarterTaskCard.cs" />
+    <Compile Include="App\Proactive\ProactiveCoordinator.cs" />
+    <Compile Include="App\Proactive\ProactiveHooks.cs" />
+    <Compile Include="App\Proactive\ProactiveJobLaunch.cs" />
+    <Compile Include="App\Proactive\TapVoiceCapture.cs" />
+    <Compile Include="App\Program.cs" />
+    <Compile Include="App\Services\AppEntry.cs" />
+    <Compile Include="App\Services\AppRelaunch.cs" />
+    <Compile Include="App\Services\AppServices.cs" />
+    <Compile Include="App\Services\ConnectedApps.cs" />
+    <Compile Include="App\Services\CoreAppSettings.cs" />
+    <Compile Include="App\Services\CrashReporting.cs" />
+    <Compile Include="App\Services\IAppActions.cs" />
+    <Compile Include="App\Services\IAppSettings.cs" />
+    <Compile Include="App\Services\INotchActions.cs" />
+    <Compile Include="App\Services\INotchCardActions.cs" />
+    <Compile Include="App\Services\IntegrationAnswer.cs" />
+    <Compile Include="App\Services\JsonAppSettings.cs" />
+    <Compile Include="App\Services\MainThreadStallMonitor.cs" />
+    <Compile Include="App\Services\MemoryMonitor.cs" />
+    <Compile Include="App\Services\UiWork.cs" />
+    <Compile Include="App\Services\Updates\IdleInstallContext.cs" />
+    <Compile Include="App\Services\Updates\IdleInstallPolicy.cs" />
+    <Compile Include="App\Services\Updates\IUpdateService.cs" />
+    <Compile Include="App\Services\Updates\NullUpdateService.cs" />
+    <Compile Include="App\Services\Updates\UpdateService.cs" />
+    <Compile Include="App\Services\Updates\UpdateState.cs" />
+    <Compile Include="App\Services\Updates\UpdateWindow.cs" />
+    <Compile Include="App\Settings\AgentFolders.cs" />
+    <Compile Include="App\Settings\BugReport.cs" />
+    <Compile Include="App\Settings\CommandResolver.cs" />
+    <Compile Include="App\Settings\ConnectorAuth.cs" />
+    <Compile Include="App\Settings\ConnectorSignInKind.cs" />
+    <Compile Include="App\Settings\ConnectorSignInState.cs" />
+    <Compile Include="App\Settings\CustomConnector.cs" />
+    <Compile Include="App\Settings\CustomConnectorSecrets.cs" />
+    <Compile Include="App\Settings\CustomConnectorStore.cs" />
+    <Compile Include="App\Settings\DeveloperFlags.cs" />
+    <Compile Include="App\Settings\GelSlider.cs" />
+    <Compile Include="App\Settings\HotkeyRules.cs" />
+    <Compile Include="App\Settings\MoneyBarChart.cs" />
+    <Compile Include="App\Settings\ObsidianVault.cs" />
+    <Compile Include="App\Settings\PlanFixtures.cs" />
+    <Compile Include="App\Settings\ReferralEstimatorCard.cs" />
+    <Compile Include="App\Settings\SettingsContent.cs" />
+    <Compile Include="App\Settings\SettingsHost.cs" />
+    <Compile Include="App\Settings\SettingsWindow.cs" />
+    <Compile Include="App\Settings\ShortcutCaptureRules.cs" />
+    <Compile Include="App\Settings\ShortcutRecorder.cs" />
+    <Compile Include="App\Settings\SK.cs" />
+    <Compile Include="App\Settings\WrapPanel.cs" />
+    <Compile Include="App\Shell\Displays.cs" />
+    <Compile Include="App\Shell\FocusWatch.cs" />
+    <Compile Include="App\Shell\OneBrainStatsPanel.cs" />
+    <Compile Include="App\Shell\OverlayWindow.cs" />
+    <Compile Include="App\Shell\PanelWindow.cs" />
+    <Compile Include="App\Shell\TaskbarButton.cs" />
+    <Compile Include="App\Shell\TransparentBackdrop.cs" />
+    <Compile Include="App\Shell\TrayIcon.cs" />
+    <Compile Include="App\Shell\ZOrder.cs" />
+    <Compile Include="App\TimerRoots.cs" />
+    <Compile Include="App\UI\Accessibility.cs" />
+    <Compile Include="App\UI\AccessibleGrid.cs" />
+    <Compile Include="App\UI\Anim.cs" />
+    <Compile Include="App\UI\BrandMark.cs" />
+    <Compile Include="App\UI\CenteredWrapPanel.cs" />
+    <Compile Include="App\UI\DevSignIn.cs" />
+    <Compile Include="App\UI\GelActionButton.cs" />
+    <Compile Include="App\UI\GelAppearance.cs" />
+    <Compile Include="App\UI\GelButton.cs" />
+    <Compile Include="App\UI\GelIconButton.cs" />
+    <Compile Include="App\UI\GelSurface.cs" />
+    <Compile Include="App\UI\HeaderPills.cs" />
+    <Compile Include="App\UI\Icons.cs" />
+    <Compile Include="App\UI\IntegrationLogos.cs" />
+    <Compile Include="App\UI\IntroMark.cs" />
+    <Compile Include="App\UI\IntroStageLayout.cs" />
+    <Compile Include="App\UI\Markdown.cs" />
+    <Compile Include="App\UI\MotionPreference.cs" />
+    <Compile Include="App\UI\Once.cs" />
+    <Compile Include="App\UI\PointerFrames.cs" />
+    <Compile Include="App\UI\Pressable.cs" />
+    <Compile Include="App\UI\PressableAutomationPeer.cs" />
+    <Compile Include="App\UI\RingCloseButton.cs" />
+    <Compile Include="App\UI\RoundedVideoView.cs" />
+    <Compile Include="App\UI\ScaleDownText.cs" />
+    <Compile Include="App\UI\ShadowLayer.cs" />
+    <Compile Include="App\UI\Sounds.cs" />
+    <Compile Include="App\UI\Ui.cs" />
+    <Compile Include="App\Wiring\AgentToolHost.cs" />
+    <Compile Include="App\Wiring\AgentVoiceRelay.cs" />
+    <Compile Include="App\Wiring\BrainContext.cs" />
+    <Compile Include="App\Wiring\CompanionNotchBridge.cs" />
+    <Compile Include="App\Wiring\DeferredCursorOverlay.cs" />
+    <Compile Include="App\Wiring\DeferredHighlightOverlay.cs" />
+    <Compile Include="App\Wiring\DeveloperChatModels.cs" />
+    <Compile Include="App\Wiring\DictationHooks.cs" />
+    <Compile Include="App\Wiring\FlowHooks.cs" />
+    <Compile Include="App\Wiring\HotkeyRouter.cs" />
+    <Compile Include="App\Wiring\MutedAudioOutput.cs" />
+    <Compile Include="App\Wiring\OneBrainJobReports.cs" />
+    <Compile Include="App\Wiring\PlatformDesktopActions.cs" />
+    <Compile Include="App\Wiring\RealStack.cs" />
+    <Compile Include="App\Wiring\WindowsPageReader.cs" />
+    <Compile Include="App\WorkChatLiveWork.cs" />
+    <Compile Include="App\WorkHandOffDirectory.cs" />
+    <Compile Include="App\WorkNotchUpdates.cs" />
+    <Compile Include="App\XamlGeneratedProgram.cs" />
+    <Compile Include="Microsoft\Windows\ApplicationModel\WindowsAppRuntime\Common\AutoInitialize.cs" />
+    <Compile Include="Microsoft\Windows\Foundation\UndockedRegFreeWinRTCS\AutoInitialize.cs" />
+    <Compile Include="Microsoft\Windows\Foundation\UndockedRegFreeWinRTCS\NativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sentry\Generated\BuildPropertyInitializer.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.2.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.3.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.4.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.5.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.6.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.7.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.8.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.9.cs" />
+    <Compile Include="System\Text\RegularExpressions\Generated\-RegexGenerator_g-F36FB2D25FB3E06331DF866801390D20E97C6BDCC4.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\GlobalVtableLookup.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IDictionary_int_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IDictionary_string_bool.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IDictionary_string_int.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IDictionary_string_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_bool.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_byte.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_char.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_double.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_int.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_Microsoft_UI_Composition_IAnimationObject.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_Microsoft_UI_Composition_IVisualElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_Microsoft_UI_Composition_IVisualElement2.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_Microsoft_UI_Xaml_DependencyObject.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_Microsoft_UI_Xaml_FrameworkElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_Microsoft_UI_Xaml_UIElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_object.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_IEnumerable_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_IEnumerable_char_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_IEnumerable_object_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_IList_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_IReadOnlyList_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_IReadOnlyList_object_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_KeyValuePair_int__str.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_KeyValuePair_string__.2.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_KeyValuePair_string__.3.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_Generic_KeyValuePair_string__.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_IEnumerable.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Collections_IList.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_DateTimeOffset.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_System_Guid.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerable_Windows_Foundation_Point.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_bool.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_byte.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_double.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_int.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_Microsoft_UI_Composition_IAnimationObject.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_Microsoft_UI_Composition_IVisualElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_Microsoft_UI_Composition_IVisualElement2.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_Microsoft_UI_Xaml_DependencyObject.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_Microsoft_UI_Xaml_FrameworkElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_Microsoft_UI_Xaml_UIElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_object.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_IEnumerable_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_IEnumerable_char_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_IEnumerable_object_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_IList_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_IReadOnlyList_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_IReadOnlyList_object_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_KeyValuePair_int__str.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_KeyValuePair_string__.2.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_KeyValuePair_string__.3.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_Generic_KeyValuePair_string__.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_IEnumerable.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Collections_IList.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_DateTimeOffset.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_System_Guid.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IEnumerator_Windows_Foundation_Point.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_bool.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_byte.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_double.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_Microsoft_UI_Xaml_FrameworkElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_Microsoft_UI_Xaml_UIElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_System_DateTimeOffset.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IList_Windows_Foundation_Point.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyDictionary_int_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyDictionary_string_bool.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyDictionary_string_int.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyDictionary_string_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_bool.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_byte.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_double.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_Microsoft_UI_Composition_IAnimationObject.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_Microsoft_UI_Composition_IVisualElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_Microsoft_UI_Composition_IVisualElement2.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_Microsoft_UI_Xaml_DependencyObject.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_Microsoft_UI_Xaml_FrameworkElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_Microsoft_UI_Xaml_UIElement.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_object.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_Generic_IEnumerable_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_Generic_IEnumerable_char_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_Generic_IEnumerable_object_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_Generic_IList_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_Generic_IReadOnlyList_byte_.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_Generic_IReadOnlyList_objec.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_IEnumerable.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_Collections_IList.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_System_DateTimeOffset.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\IReadOnlyList_Windows_Foundation_Point.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\KeyValuePair_int_string.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\KeyValuePair_string_bool.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\KeyValuePair_string_int.cs" />
+    <Compile Include="WinRT\HeyClickyGenericHelpers\KeyValuePair_string_string.cs" />
+    <Compile Include="WinRT\HeyClickyVtableClasses\HeyClicky_App_AppWinRTTypeDetails.cs" />
+    <Compile Include="WinRT\HeyClickyVtableClasses\HeyClicky_App_HeyClicky_App_XamlTypeInfo_XamlMemberWinRTType.cs" />
+    <Compile Include="WinRT\HeyClickyVtableClasses\HeyClicky_App_HeyClicky_App_XamlTypeInfo_XamlMetaDataProvide.cs" />
+    <Compile Include="WinRT\HeyClickyVtableClasses\HeyClicky_App_HeyClicky_App_XamlTypeInfo_XamlSystemBaseTypeW.cs" />
+    <Compile Include="WinRT\HeyClickyVtableClasses\HeyClicky_App_Proactive_ProactiveCoordinatorWinRTTypeDetails.cs" />
+    <Compile Include="WinRT\HeyClickyVtableClasses\HeyClicky_App_Settings_SettingsContentWinRTTypeDetails.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

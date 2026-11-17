@@ -1,0 +1,77 @@
+﻿using System;
+using System.Globalization;
+using System.IO;
+using System.Runtime.CompilerServices;
+using HeyClicky.Agents.Jobs;
+using HeyClicky.App.Design;
+using HeyClicky.App.UI;
+using Microsoft.UI;
+using Microsoft.UI.Text;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+
+namespace HeyClicky.App.Dock
+{
+  // Token: 0x02000329 RID: 809
+  public sealed class ArcFileChip : Pressable
+  {
+    // Token: 0x06002299 RID: 8857 RVA: 0x00626598 File Offset: 0x00626598
+    [NullableContext(1)]
+    public ArcFileChip(string entry, [Nullable(2)] string workspace, Action open)
+      : base(true)
+    {
+      bool flag = CardReadyOutput.IsWebLink(entry);
+      string text = (flag ? entry : DockFiles.Resolve(entry, workspace));
+      DockFileStyle dockFileStyle = DockFileStyle.For(flag ? entry : text);
+      string text2;
+      if (!flag)
+      {
+        text2 = Path.GetFileNameWithoutExtension(text);
+      }
+      else
+      {
+        ClickyLinkName.Name name = ClickyLinkName.For(entry);
+        if (name == null)
+        {
+          text2 = "Link";
+        }
+        else
+        {
+          string thing = name.Thing;
+          text2 = ((thing != null) ? CultureInfo.CurrentCulture.TextInfo.ToTitleCase(thing) : name.Site);
+        }
+      }
+      base.Height = 38.0;
+      Border plate = new Border
+      {
+        CornerRadius = new CornerRadius(10.0),
+        Background = Ui.Brush(Colors.White),
+        BorderBrush = Ui.Brush(DS.Black(0.1)),
+        BorderThickness = new Thickness(1.0)
+      };
+      base.Children.Add(new ShadowLayer(10.0, DS.Black(0.08), 3.0, 1.0, 0.0));
+      base.Children.Add(plate);
+      Border border = new Border
+      {
+        Width = 26.0,
+        Height = 26.0,
+        CornerRadius = new CornerRadius(7.0),
+        Background = Ui.Brush(dockFileStyle.Tint),
+        Child = Icons.Glyph(dockFileStyle.Glyph, 13.0, Colors.White)
+      };
+      TextBlock textBlock = Ui.Text(text2, 16.0, FontWeights.SemiBold, ArcColors.Ink.WithAlpha(0.85), TextAlignment.Left, 0, false, false);
+      textBlock.MaxWidth = 130.0;
+      textBlock.TextTrimming = TextTrimming.CharacterEllipsis;
+      StackPanel stackPanel = Ui.H(8.0, new UIElement[] { border, textBlock });
+      stackPanel.VerticalAlignment = VerticalAlignment.Center;
+      stackPanel.Padding = new Thickness(6.0, 0.0, 12.0, 0.0);
+      base.Children.Add(stackPanel);
+      base.HoverChanged += delegate(bool h)
+      {
+        plate.BorderBrush = Ui.Brush(DS.Black(h ? 0.22 : 0.1));
+      };
+      base.Click += open;
+      ToolTipService.SetToolTip(this, flag ? entry : text);
+    }
+  }
+}
